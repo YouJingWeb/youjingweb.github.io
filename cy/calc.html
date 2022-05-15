@@ -1,0 +1,41 @@
+<head>
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="cy.png">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+    <div class="flex_container_row">
+        <div></div>
+        <!--content start-->
+        <div>
+            <img src="cy.png"/>
+            <p class="company_name">CY Stainless Steel Enterprise</p>
+            
+            <div class="flex_content_row">
+                <div>
+                    <p>Height (mm)</p>
+                    <br>
+                    <p>Width (mm)</p>
+                    <br>
+                    <p>Long Gap (mm)</p>
+                    <br>
+                    <p>Short Gap (mm)</p>
+                </div>
+                <div>
+                    <input id="h" type="number" ></input>
+                    <br>
+                    <input id="w" type="number" ></input>
+                    <br>
+                    <input id="maxl" type="number" ></input>
+                    <br>
+                    <input id="minl" type="number" ></input>
+                    <br>
+                    <button onclick="fnCalcGap(h.value,w.value,maxl.value,minl.value);"> Submit </button>
+                </div>
+            </div>
+        </div>
+        <!--content end-->
+        <div></div>
+    </div>
+</body>
