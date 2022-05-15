@@ -2,8 +2,7 @@
     --border-line:#BABABA;
 }
 
-*{margin:0; padding:0; display:block;}
-title{display:none;}
+p, input{margin:0; padding:0; display:block;}
 
 /*justify start*/
 .flex_container_row{display:flex; flex-direction:row;}
