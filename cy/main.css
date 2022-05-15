@@ -1,0 +1,26 @@
+:root{
+    --border-line:#BABABA;
+}
+
+*{margin:0; padding:0; display:block;}
+
+/*justify start*/
+.flex_container_row{display:flex; flex-direction:row;}
+.flex_container_row > div:nth-of-type(1){flex:20%;}
+.flex_container_row > div:nth-of-type(2){flex:60%; padding-top:3%; height:100vh; border-left:1px solid var(--border-line); border-right:1px solid var(--border-line);}
+.flex_container_row > div:nth-of-type(3){flex:20%;}
+.flex_content_row{display:flex; flex-direction:row; padding-top:3%;}
+.flex_content_row > div:nth-of-type(1){flex:35%; text-align:right; padding-right:10px;}
+.flex_content_row > div:nth-of-type(2){flex:55%; text-align:left;}
+
+@media only screen and (max-width: 480px)
+{
+    .flex_container_row > div:nth-of-type(1){flex:0;}
+    .flex_container_row > div:nth-of-type(2){border:none; padding:0 10 0 10px; flex:100%;}
+    .flex_container_row > div:nth-of-type(3){flex:0;}
+}
+/*justify end*/
+
+img{margin: 0 auto; width:64px; height:64px; display:block;}
+.company_name{text-align: center; font-weight:bold;}
+button{border-radius:5px; outline:none; border:none; background: #1DA1F2; color:#FFF; width:64px; height:32px;}
