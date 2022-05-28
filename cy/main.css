@@ -11,6 +11,7 @@ body{background: #ECF0F3; color:#3B3B3B;}
 .flex_container_row > .neumorphism{border:none;}
 input{background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: inset  10px 10px 20px #B6B9BB, inset  -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit; height:20px;}
 button{background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: inset  10px 10px 20px #B6B9BB, inset  -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit; height:20px; cursor:pointer;}
+img{margin: 0px auto 30px auto; width:64px; height:64px; display:block;}
 /*initial elements end*/
 
 /*justify start*/
@@ -29,10 +30,10 @@ button{background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: inset 
     .flex_container_row > div:nth-of-type(3){flex:0;}
     .line_input{width:60%;}
     #input_container{width:90%;}
+    img{margin:30px auto 30px auto;}
 }
 /*justify end*/
 
-img{margin: 0px auto 30px auto; width:64px; height:64px; display:block;}
 .company_name{text-align: center; font-weight:bold;}
 button{border-radius:5px; outline:none; border:none; background: #1DA1F2; color:#FFF; width:64px; height:32px;}
 .line_input{display:inline;}
