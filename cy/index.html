@@ -4,6 +4,7 @@
     <link rel="icon" type="image/x-icon" href="cy.png">
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="../../icon/themify-icons/themify-icons.css">
 </head>
 <body>
     <div class="flex_container_row">
@@ -38,7 +39,15 @@
                     <input id="minl" type="number" ></input>
                     <br>
                     <div class="breakline"></div>
-                    <input class="hidden" id="line" type="number" onchange="calc(h.value,w.value,line.value)"></input>
+                    <div id="input_container" class="hidden">
+                        <input class="line_input" id="line" type="number" ></input>
+                        <button class="line_btn" onclick="dynamic_line(h.value,w.value,++line.value);">
+                            <span class="ti-plus"></span>
+                        </button>
+                        <button class="line_btn" onclick="dynamic_line(h.value,w.value,--line.value);">
+                            <span class="ti-minus"></span>
+                        </button>
+                    </div>
                     <br>
                     <input class="hidden" id="gap" type="number" ></input>
                     <br>
