@@ -2,7 +2,9 @@
     --border-line:#BABABA;
 }
 
-p, input{margin:0; padding:0; display:block;}
+p, input, button, #input_container{margin:0; padding:0; display:block;}
+
+.line_btn{display:inline; border-radius:50%; width:24px; height:24px;}
 
 /*justify start*/
 .flex_container_row{display:flex; flex-direction:row;}
@@ -12,16 +14,21 @@ p, input{margin:0; padding:0; display:block;}
 .flex_content_row{display:flex; flex-direction:row; padding-top:3%;}
 .flex_content_row > div:nth-of-type(1){flex:35%; text-align:right; padding-right:10px;}
 .flex_content_row > div:nth-of-type(2){flex:55%; text-align:left;}
-.breakline{}
-.hidden{visibility:hidden;}
+
 @media only screen and (max-width: 480px)
 {
     .flex_container_row > div:nth-of-type(1){flex:0;}
     .flex_container_row > div:nth-of-type(2){border:none; padding:0 10 0 10px; flex:100%;}
     .flex_container_row > div:nth-of-type(3){flex:0;}
+    .line_input{width:60%;}
+    #input_container{width:98%;}
 }
 /*justify end*/
 
 img{margin: 0 auto; width:64px; height:64px; display:block;}
 .company_name{text-align: center; font-weight:bold;}
 button{border-radius:5px; outline:none; border:none; background: #1DA1F2; color:#FFF; width:64px; height:32px;}
+.line_input{display:inline;}
+.breakline{}
+.hidden{visibility:hidden;}
+p, #input_container{line-height:20px;}
