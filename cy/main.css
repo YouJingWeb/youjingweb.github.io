@@ -12,7 +12,8 @@ p, input{margin:0; padding:0; display:block;}
 .flex_content_row{display:flex; flex-direction:row; padding-top:3%;}
 .flex_content_row > div:nth-of-type(1){flex:35%; text-align:right; padding-right:10px;}
 .flex_content_row > div:nth-of-type(2){flex:55%; text-align:left;}
-
+.breakline{}
+.hidden{visibility:hidden;}
 @media only screen and (max-width: 480px)
 {
     .flex_container_row > div:nth-of-type(1){flex:0;}
