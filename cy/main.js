@@ -2,13 +2,13 @@ function fnCalcGap(h,w,maxl,minl) {
 var height = h;
 var templine = Math.trunc(height/maxl);
 do {
-var templine2 = (height-(templine*w))/(templine+1)
+var templine2 = calc(height,w,templine);
 if (templine2 < minl)
 templine--;
 }while (templine2 < minl);
 
 var bigtempline = templine-1;
-var bigtempline2 = (height-(bigtempline*w))/(bigtempline+1);
+var bigtempline2 = calc(height,w,bigtempline);
 
 var gap =
 (Math.floor(templine2*100)/100);
@@ -50,7 +50,13 @@ fracdec = ".75";
 return inch + " inch " + frac + fracdec + "/8 ounce";
 }
 
-function calc(h,w,x){
-    var ans = (h-(x*w))/(x+1);
-    document.getElementById("gap").value = (Math.floor(ans*100)/100);
+function calc(h,w,l){
+    var ans = (h-(l*w))/(parseInt(l)+1);
+    return ans;
+}
+
+function dynamic_line(h,w,l){
+    document.getElementById("line").value = l;
+    document.getElementById("gap").value = 
+(Math.floor(calc(h,w,l)*100)/100);
 }
