@@ -60,3 +60,24 @@ function dynamic_line(h,w,l){
     document.getElementById("gap").value = 
 (Math.floor(calc(h,w,l)*100)/100);
 }
+
+function input_change(h,w,maxL,minL){
+    if(h === "") {
+        document.getElementById("h").focus();
+        return;
+    }
+    else if(w === "") {
+        document.getElementById("w").focus();
+        return;
+    }
+    else if(maxL === "") {
+        document.getElementById("maxl").focus();
+        return;
+    }
+    else if(minL === "") {
+        document.getElementById("minl").focus();
+        return;
+    }
+    if(h !== "" && w !== "" && maxL !== "" && minL !== "")
+        fnCalcGap(h,w,maxL,minL);
+}
