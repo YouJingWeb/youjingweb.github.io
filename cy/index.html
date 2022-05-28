@@ -4,6 +4,7 @@
     <link rel="icon" type="image/x-icon" href="cy.png">
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="../../icon/themify-icons/themify-icons.css">
 </head>
 <body>
     <div class="flex_container_row">
@@ -29,28 +30,26 @@
                     <p class="hidden">Gap (mm)</p>
                 </div>
                 <div>
-                    <input id="h" type="number" ></input>
+                    <input autofocus id="h" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
                     <br>
-                    <input id="w" type="number" ></input>
+                    <input id="w" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
                     <br>
-                    <input id="maxl" type="number" ></input>
+                    <input id="maxl" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
                     <br>
-                    <input id="minl" type="number" ></input>
+                    <input id="minl" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
                     <br>
                     <div class="breakline"></div>
                     <div id="input_container" class="hidden">
                         <input class="line_input" id="line" type="number" ></input>
                         <button class="line_btn" onclick="dynamic_line(h.value,w.value,++line.value);">
-                            +
+                            <span class="ti-plus"></span>
                         </button>
                         <button class="line_btn" onclick="dynamic_line(h.value,w.value,--line.value);">
-                            -
+                            <span class="ti-minus"></span>
                         </button>
                     </div>
                     <br>
                     <input class="hidden" id="gap" type="number" ></input>
-                    <br>
-                    <button onclick="fnCalcGap(h.value,w.value,maxl.value,minl.value);"> Submit </button>
                 </div>
             </div>
         </div>
