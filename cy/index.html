@@ -22,6 +22,11 @@
                     <p>Long Gap (mm)</p>
                     <br>
                     <p>Short Gap (mm)</p>
+                    <br>
+                    <div class="breakline"></div>
+                    <p class="hidden">Lines</p>
+                    <br>
+                    <p class="hidden">Gap (mm)</p>
                 </div>
                 <div>
                     <input id="h" type="number" ></input>
@@ -31,6 +36,11 @@
                     <input id="maxl" type="number" ></input>
                     <br>
                     <input id="minl" type="number" ></input>
+                    <br>
+                    <div class="breakline"></div>
+                    <input class="hidden" id="line" type="number" onchange="calc(h.value,w.value,line.value)"></input>
+                    <br>
+                    <input class="hidden" id="gap" type="number" ></input>
                     <br>
                     <button onclick="fnCalcGap(h.value,w.value,maxl.value,minl.value);"> Submit </button>
                 </div>
