@@ -2,22 +2,32 @@
     --border-line:#BABABA;
 }
 
-p, input, button, #input_container{margin:0; padding:0; display:block;}
+modal, p, input, button, #input_container{margin:0; padding:0; display:block;}
 
 .line_btn{display:inline; border-radius:50%; width:24px; height:24px; margin:0px 0px 0px 5px;}
+
+/*modal start*/
+modal{z-index:2; position:absolute; top:50px; width:40%; height:30px; right:50%; transform: translate(50%,0%); background: linear-gradient(145deg, #FDFFFF, rbga(255,255,255,0.5)); box-shadow: 10px 10px 20px #B6B9BB, -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit; height:30%; padding:20 30 10 30;}
+table{width:100%;}
+/*modal end*/
+
 /*initial elements start*/
 body{background: #ECF0F3; color:#3B3B3B;}
 .neumorphism {background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: 10px 10px 20px #B6B9BB, -10px -10px 20px #FFFFFF; border-radius:17px; border:1px solid #F3F3F3; color:inherit;}
 .flex_container_row > .neumorphism{border:none;}
-input{background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: inset  10px 10px 20px #B6B9BB, inset  -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit; height:20px;}
-button{background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: inset  10px 10px 20px #B6B9BB, inset  -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit; height:20px; cursor:pointer;}
+input{background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: inset  10px 10px 20px #B6B9BB, inset  -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit;}
+button{background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: 10px 10px 20px #B6B9BB, -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit; height:20px; cursor:pointer;}
 img{margin: 0px auto 30px auto; width:64px; height:64px; display:block;}
+:focus{ outline-color:#B6B9BB; outline-offset:2px; outline:double;}
+
+.flex_content_row > div > p{font-weight:bold; font-size:14px; height:30px; valign:middle; line-height:30px;}
+.flex_content_row > div > input, #line{height:30px; valign:middle; line-height:30px; padding: 0 0 0 10px;}
 /*initial elements end*/
 
 /*justify start*/
-.flex_container_row{display:flex; flex-direction:row;}
+.flex_container_row{display:flex; flex-direction:row; position:absolute; top:0; bottom:0; right:0; left:0; overflow:hidden;}
 .flex_container_row > div:nth-of-type(1){flex:20%;}
-.flex_container_row > div:nth-of-type(2){flex:60%; padding-top:3%; height:100vh;}
+.flex_container_row > div:nth-of-type(2){flex:60%; padding-top:3%;}
 .flex_container_row > div:nth-of-type(3){flex:20%;}
 .flex_content_row{display:flex; flex-direction:row; padding-top:3%;}
 .flex_content_row > div:nth-of-type(1){flex:35%; text-align:right; padding-right:10px;}
@@ -31,13 +41,15 @@ img{margin: 0px auto 30px auto; width:64px; height:64px; display:block;}
     .line_input{width:60%;}
     #input_container{width:90%;}
     img{margin:30px auto 30px auto;}
+    input{padding:5px; height: 30px;}
+    .company_name{margin:0 0 30 0;}
+    modal{width:75%;}
 }
 /*justify end*/
 
 .company_name{text-align: center; font-weight:bold;}
-button{border-radius:5px; outline:none; border:none; background: #1DA1F2; color:#FFF; width:64px; height:32px;}
+button{border-radius:5px; outline:none; border:none; font-size:auto; font-weight:bold; width:64px; height:32px;}
 .line_input{display:inline;}
 .breakline{}
 .hidden{visibility:hidden;}
 p, #input_container{line-height:20px;}
-:focus{ outline-color:#B6B9BB; outline-offset:2px;}
