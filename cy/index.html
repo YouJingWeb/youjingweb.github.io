@@ -17,7 +17,7 @@
                 <div>
                     <p>Height (mm)</p>
                     <br>
-                    <p>Width (mm)</p>
+                    <p>Hollow (mm)</p>
                     <br>
                     <p>Long Gap (mm)</p>
                     <br>
@@ -29,13 +29,13 @@
                     <p class="hidden">Gap (mm)</p>
                 </div>
                 <div>
-                    <input autofocus id="h" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
+                    <input placeholder="Height of inner object" autofocus id="h" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
                     <br>
-                    <input id="w" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
+                    <input placeholder="Width of hollow steel" id="w" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
                     <br>
-                    <input id="maxl" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
+                    <input placeholder="Maximum distance of gap" id="maxl" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
                     <br>
-                    <input id="minl" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
+                    <input placeholder="Minimum distance of gap" id="minl" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
                     <br>
                     <div class="breakline"></div>
                     <div id="input_container" class="hidden">
@@ -52,3 +52,5 @@
         <div class="neumorphism"></div>
     </div>
 </body>
+
+<modal id="modal" style="display:none;"></modal>
