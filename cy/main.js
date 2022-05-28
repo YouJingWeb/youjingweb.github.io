@@ -1,9 +1,4 @@
-
 function fnCalcGap(h,w,maxl,minl) {
-document.getElementById("h").value = "";
-document.getElementById("w").value = "";
-document.getElementById("minl").value = "";
-document.getElementById("maxl").value = "";
 var height = h;
 var templine = Math.trunc(height/maxl);
 do {
@@ -24,6 +19,11 @@ bigtempline = "-";
 gap2 = "-"
 }
 
+for(var i=0; i<document.getElementsByClassName("hidden").length; i++){
+    document.getElementsByClassName("hidden")[i].style.visibility = "visible";
+    document.getElementById("line").value = templine;
+    document.getElementById("gap").value = gap;
+}
 alert(
 "gap: "+ gap +"("+ mmtoinch(gap)+")\n"+
 "line: "+templine + "\n\n" +
@@ -48,4 +48,9 @@ else if (fracdec < 100)
 fracdec = ".75";
 
 return inch + " inch " + frac + fracdec + "/8 ounce";
+}
+
+function calc(h,w,x){
+    var ans = (h-(x*w))/(x+1);
+    document.getElementById("gap").value = (Math.floor(ans*100)/100);
 }
