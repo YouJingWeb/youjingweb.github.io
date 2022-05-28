@@ -8,6 +8,7 @@ p, input, button, #input_container{margin:0; padding:0; display:block;}
 /*initial elements start*/
 body{background: #ECF0F3; color:#3B3B3B;}
 .neumorphism {background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: 10px 10px 20px #B6B9BB, -10px -10px 20px #FFFFFF; border-radius:17px; border:1px solid #F3F3F3; color:inherit;}
+.flex_container_row > .neumorphism{border:none;}
 input{background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: inset  10px 10px 20px #B6B9BB, inset  -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit; height:20px;}
 button{background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: inset  10px 10px 20px #B6B9BB, inset  -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit; height:20px; cursor:pointer;}
 /*initial elements end*/
