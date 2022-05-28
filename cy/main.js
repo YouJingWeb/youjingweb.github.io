@@ -24,11 +24,19 @@ for(var i=0; i<document.getElementsByClassName("hidden").length; i++){
     document.getElementById("line").value = templine;
     document.getElementById("gap").value = gap;
 }
-alert(
-"gap: "+ gap +"("+ mmtoinch(gap)+")\n"+
-"line: "+templine + "\n\n" +
-"gap besar: "+ gap2 + "("+ mmtoinch(gap2)+")\n" +
-"line besar: "+bigtempline + "\n");
+    document.getElementById("modal").innerHTML= "<table>"+
+"<tr><td></td><td></td><td style='text-align:right;'><button onclick='fnClose()' style='height:32px; width:32px;' class='line_btn' >X</button></td></tr>"+
+"<tr><td>Gap</td><td>:</td><td>"+ gap +"("+ mmtoinch(gap)+")</td></tr>"+
+"<tr><td>Strips</td><td>:</td><td>"+ templine +"</td></tr>"+
+"<tr><td></td><td></td><td></td></tr>"+
+"<tr><td>Gap</td><td>:</td><td>"+ gap2 +"("+ mmtoinch(gap2)+")</td></tr>"+
+"<tr><td>Strips</td><td>:</td><td>"+ bigtempline +"</td></tr>"+
+"<tr><td></td><td></td><td></td></tr>"+
+"</table>";
+        
+        /**"Gap: "+ gap +"("+ mmtoinch(gap)+")<br>"+"line: "+templine + "<br><br>" +
+"gap besar: "+ gap2 + "("+ mmtoinch(gap2)+")<br>" +
+"line besar: "+bigtempline + "<br>";**/
 }
 
 function mmtoinch(x) {
@@ -78,6 +86,16 @@ function input_change(h,w,maxL,minL){
         document.getElementById("minl").focus();
         return;
     }
-    if(h !== "" && w !== "" && maxL !== "" && minL !== "")
+    if(h !== "" && w !== "" && maxL !== "" && minL !== ""){
         fnCalcGap(h,w,maxL,minL);
+        document.getElementById("modal").style.display = "block";
+        document.getElementsByClassName("flex_container_row")[0].style.filter = " blur(5px)";
+    }
+}
+
+function fnClose(){
+    document.getElementsByClassName("flex_container_row")[0].style.filter = "none";
+    document.getElementById("modal").style.color = "transparent";
+    document.getElementById("modal").style.zIndex = "-1";
+    document.getElementsByTagName("body")[0].style.zIndex = "-1";
 }
