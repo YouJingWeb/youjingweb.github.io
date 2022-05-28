@@ -95,7 +95,5 @@ function input_change(h,w,maxL,minL){
 
 function fnClose(){
     document.getElementsByClassName("flex_container_row")[0].style.filter = "none";
-    document.getElementById("modal").style.color = "transparent";
-    document.getElementById("modal").style.zIndex = "-1";
-    document.getElementsByTagName("body")[0].style.zIndex = "-1";
+    document.getElementById("modal").style.display = "none";
 }
