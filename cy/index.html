@@ -4,7 +4,6 @@
     <link rel="icon" type="image/x-icon" href="cy.png">
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="main.js"></script>
-    <link rel="stylesheet" href="../../icon/themify-icons/themify-icons.css">
 </head>
 <body>
     <div class="flex_container_row">
@@ -41,12 +40,8 @@
                     <div class="breakline"></div>
                     <div id="input_container" class="hidden">
                         <input class="line_input" id="line" type="number" ></input>
-                        <button class="line_btn" onclick="dynamic_line(h.value,w.value,++line.value);">
-                            <span class="ti-plus"></span>
-                        </button>
-                        <button class="line_btn" onclick="dynamic_line(h.value,w.value,--line.value);">
-                            <span class="ti-minus"></span>
-                        </button>
+                        <button class="line_btn" onclick="dynamic_line(h.value,w.value,++line.value);">+</button>
+                        <button class="line_btn" onclick="dynamic_line(h.value,w.value,--line.value);">-</button>
                     </div>
                     <br>
                     <input class="hidden" id="gap" type="number" ></input>
