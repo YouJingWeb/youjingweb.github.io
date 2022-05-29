@@ -8,8 +8,8 @@ nav, modal, p, input, button, #input_container{margin:0; padding:0; display:bloc
 
 /*modal start*/
 modal{z-index:2; position:absolute; top:50px; width:40%; height:auto; right:50%; transform: translate(50%,0%); background: linear-gradient(145deg, rgba(200,200,200,.5), rgba(255,255,255,.5)); box-shadow: 10px 10px 20px #666666, -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit; padding:20 30 0 30;}
-table{width:100%; margin:30px auto 30px auto;}
-td{font-weight:bold;}
+table{width:100%; margin:30px auto 30px auto; }
+td{font-weight:bold; font-size:14px; line-height:20px; vertical-align:top;}
 /*modal end*/
 
 /*initial elements start*/
