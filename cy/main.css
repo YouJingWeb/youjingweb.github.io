@@ -16,10 +16,10 @@
     --blackinputshadow: inset  10px 10px 20px #000000, inset  -10px -10px 20px #333333;
     --inputblackborder: 1px solid #666666;
     --neublack:linear-gradient(145deg, #333333, #000000);
-    --modalgradientcolorwhite1:rgba(55,55,55,.5);
-    --modalgradientcolorwhite2:rgba(0,0,0,.5);
+    --modalgradientcolorblack1:rgba(55,55,55,.5);
+    --modalgradientcolorblack2:rgba(0,0,0,.5);
     --modalwhiteboxshadow: 10px 10px 20px #333333, -10px -10px 20px #000000;
-    
+    --bodyblack:#000000;
 }
 
 nav, modal, p, input, button, #input_container{margin:0; padding:0; display:block;}
@@ -27,13 +27,13 @@ nav, modal, p, input, button, #input_container{margin:0; padding:0; display:bloc
 .line_btn{display:inline; border-radius:50%; width:24px; height:24px; margin:0px 0px 0px 5px;}
 
 /*modal start*/
-modal{z-index:2; position:absolute; top:50px; width:40%; height:auto; right:50%; transform: translate(50%,0%); background: linear-gradient(145deg, var(--modalgradientcolor1), var(--modalgradientcolor2)); box-shadow: var(--modalblackboxshadow); border-radius:5px; border: var(--inputblackborder); color:inherit; padding:20 30 0 30;}
+modal{z-index:2; position:absolute; top:50px; width:40%; height:auto; right:50%; transform: translate(50%,0%); background: linear-gradient(145deg, var(--modalgradientcolorblack1), var(--modalgradientcolorblack2)); box-shadow: var(--modalblackboxshadow); border-radius:5px; border: var(--inputblackborder); color:inherit; padding:20 30 0 30;}
 table{width:100%; margin:30px auto 30px auto; }
 td{font-weight:bold; font-size:14px; line-height:20px; vertical-align:top;}
 /*modal end*/
 
 /*initial elements start*/
-body{background: var(--body); color:var(--whitecolor);}
+body{background: var(--bodyblack); color:var(--whitecolor);}
 .neumorphism {background: var(--neublack); border-radius:17px; box-shadow: var(--blackshadow); border:1px solid rgba(0,0,0,.3); color:inherit;}
 .flex_container_row > .neumorphism{border:none;}
 input{background: var(--neublack); box-shadow: var(--blackinputshadow); border-radius:5px; border: var(--inputblackborder); color:inherit;}
