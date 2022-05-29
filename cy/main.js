@@ -25,13 +25,13 @@ for(var i=0; i<document.getElementsByClassName("hidden").length; i++){
     document.getElementById("gap").value = gap;
 }
     document.getElementById("modal").innerHTML= "<table>"+
-"<tr><td></td><td></td><td style='text-align:right;'><button onclick='fnClose()' style='height:32px; width:32px;' class='line_btn' >X</button></td></tr>"+
-"<tr><td>Gap</td><td>:</td><td>"+ gap +"("+ mmtoinch(gap)+")</td></tr>"+
-"<tr><td>Strips</td><td>:</td><td>"+ templine +"</td></tr>"+
+"<tr><td class='tlabel'>Gap</td><td>:</td><td>"+ gap +"("+ mmtoinch(gap)+")</td></tr>"+
+"<tr><td class='tlabel'>Strips</td><td>:</td><td>"+ templine +"</td></tr>"+
 "<tr><td></td><td></td><td></td></tr>"+
-"<tr><td>Gap</td><td>:</td><td>"+ gap2 +"("+ mmtoinch(gap2)+")</td></tr>"+
-"<tr><td>Strips</td><td>:</td><td>"+ bigtempline +"</td></tr>"+
+"<tr><td class='tlabel'>Bigger Gap</td><td>:</td><td>"+ gap2 +"("+ mmtoinch(gap2)+")</td></tr>"+
+"<tr><td class='tlabel'>Bigger Strips</td><td>:</td><td>"+ bigtempline +"</td></tr>"+
 "<tr><td></td><td></td><td></td></tr>"+
+"<tr><td colspan='4' style='text-align:center;'><button id='close' onclick='fnClose()' style='height:32px; width:80px; border-radius:5px' class='line_btn' >Close</button></td></tr>"+
 "</table>";
         
         /**"Gap: "+ gap +"("+ mmtoinch(gap)+")<br>"+"line: "+templine + "<br><br>" +
@@ -89,7 +89,7 @@ function input_change(h,w,maxL,minL){
     if(h !== "" && w !== "" && maxL !== "" && minL !== ""){
         fnCalcGap(h,w,maxL,minL);
         document.getElementById("modal").style.display = "block";
-        document.getElementsByClassName("flex_container_row")[0].style.filter = " blur(5px)";
+        document.getElementsByClassName("flex_container_row")[0].style.filter = " blur(2px)";
     }
 }
 
