@@ -25,7 +25,7 @@ for(var i=0; i<document.getElementsByClassName("hidden").length; i++){
     document.getElementById("gap").value = gap;
 }
     document.getElementById("modal").innerHTML= "<table>"+
-"<tr><td class='tlabel'>Gap</td><td>:</td><td>"+ gap +"("+ mmtoinch(gap)+")</td></tr>"+
+"<tr><td class='tlabel'>Gap</td><td>:</td><td>"+ gap +" ("+ mmtoinch(gap)+")</td></tr>"+
 "<tr><td class='tlabel'>Strips</td><td>:</td><td>"+ templine +"</td></tr>"+
 "<tr><td></td><td></td><td></td></tr>"+
 "<tr><td class='tlabel'>Bigger Gap</td><td>:</td><td>"+ gap2 +"("+ mmtoinch(gap2)+")</td></tr>"+
