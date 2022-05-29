@@ -2,13 +2,14 @@
     --border-line:#BABABA;
 }
 
-modal, p, input, button, #input_container{margin:0; padding:0; display:block;}
+nav, modal, p, input, button, #input_container{margin:0; padding:0; display:block;}
 
 .line_btn{display:inline; border-radius:50%; width:24px; height:24px; margin:0px 0px 0px 5px;}
 
 /*modal start*/
-modal{z-index:2; position:absolute; top:50px; width:40%; height:30px; right:50%; transform: translate(50%,0%); background: linear-gradient(145deg, #FDFFFF, rbga(255,255,255,0.5)); box-shadow: 10px 10px 20px #B6B9BB, -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit; height:30%; padding:20 30 10 30;}
-table{width:100%;}
+modal{z-index:2; position:absolute; top:50px; width:40%; height:auto; right:50%; transform: translate(50%,0%); background: linear-gradient(145deg, rgba(200,200,200,.5), rgba(255,255,255,.5)); box-shadow: 10px 10px 20px #666666, -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit; padding:20 30 0 30;}
+table{width:100%; margin:30px auto 30px auto;}
+td{font-weight:bold;}
 /*modal end*/
 
 /*initial elements start*/
@@ -44,6 +45,7 @@ img{margin: 0px auto 30px auto; width:64px; height:64px; display:block;}
     input{padding:5px; height: 30px;}
     .company_name{margin:0 0 30 0;}
     modal{width:75%;}
+    #close{margin-top:25px;}
 }
 /*justify end*/
 
