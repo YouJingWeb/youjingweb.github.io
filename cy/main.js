@@ -15,8 +15,24 @@ var gap =
 var gap2 = (Math.floor(bigtempline2*100)/100);
 
 if (bigtempline2 >= maxl) {
-bigtempline = "-";
-gap2 = "-"
+document.getElementById("modal").innerHTML= "<table>"+
+"<tr><td class='tlabel'>Gap</td><td>:</td><td>"+ gap +" ("+ mmtoinch(gap)+")</td></tr>"+
+"<tr><td class='tlabel'>Strips</td><td>:</td><td>"+ templine +"</td></tr>"+
+"<tr><td></td><td></td><td></td></tr>"+
+"<tr><td></td><td></td><td></td></tr>"+
+"<tr><td colspan='4' style='text-align:center;'><button id='close' onclick='fnClose()' style='height:32px; width:80px; border-radius:5px' class='line_btn' >Close</button></td></tr>"+
+"</table>";
+}
+else{
+    document.getElementById("modal").innerHTML= "<table>"+
+"<tr><td class='tlabel'>Gap</td><td>:</td><td>"+ gap +" ("+ mmtoinch(gap)+")</td></tr>"+
+"<tr><td class='tlabel'>Strips</td><td>:</td><td>"+ templine +"</td></tr>"+
+"<tr><td></td><td></td><td></td></tr>"+
+"<tr><td class='tlabel'>Bigger Gap</td><td>:</td><td>"+ gap2 +" ("+ mmtoinch(gap2)+")</td></tr>"+
+"<tr><td class='tlabel'>Bigger Strips</td><td>:</td><td>"+ bigtempline +"</td></tr>"+
+"<tr><td></td><td></td><td></td></tr>"+
+"<tr><td colspan='4' style='text-align:center;'><button id='close' onclick='fnClose()' style='height:32px; width:80px; border-radius:5px' class='line_btn' >Close</button></td></tr>"+
+"</table>";
 }
 
 for(var i=0; i<document.getElementsByClassName("hidden").length; i++){
@@ -24,19 +40,6 @@ for(var i=0; i<document.getElementsByClassName("hidden").length; i++){
     document.getElementById("line").value = templine;
     document.getElementById("gap").value = gap;
 }
-    document.getElementById("modal").innerHTML= "<table>"+
-"<tr><td class='tlabel'>Gap</td><td>:</td><td>"+ gap +" ("+ mmtoinch(gap)+")</td></tr>"+
-"<tr><td class='tlabel'>Strips</td><td>:</td><td>"+ templine +"</td></tr>"+
-"<tr><td></td><td></td><td></td></tr>"+
-"<tr><td class='tlabel'>Bigger Gap</td><td>:</td><td>"+ gap2 +"("+ mmtoinch(gap2)+")</td></tr>"+
-"<tr><td class='tlabel'>Bigger Strips</td><td>:</td><td>"+ bigtempline +"</td></tr>"+
-"<tr><td></td><td></td><td></td></tr>"+
-"<tr><td colspan='4' style='text-align:center;'><button id='close' onclick='fnClose()' style='height:32px; width:80px; border-radius:5px' class='line_btn' >Close</button></td></tr>"+
-"</table>";
-        
-        /**"Gap: "+ gap +"("+ mmtoinch(gap)+")<br>"+"line: "+templine + "<br><br>" +
-"gap besar: "+ gap2 + "("+ mmtoinch(gap2)+")<br>" +
-"line besar: "+bigtempline + "<br>";**/
 }
 
 function mmtoinch(x) {
