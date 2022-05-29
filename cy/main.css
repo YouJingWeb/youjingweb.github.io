@@ -1,5 +1,25 @@
 :root{
     --border-line:#BABABA;
+    --modalgradientcolorwhite1:rgba(200,200,200,.5);
+    --modalgradientcolorwhite2:rgba(255,255,255,.5);
+    --body:#ECF0F3;
+    --blackcolor:#3B3B3B;
+    --whitecolor:#FFFFFF;
+    --graycolor:#EEEEEE;
+    --neuwhite:linear-gradient(145deg, #FDFFFF, #D4D8DB);
+    --whiteshadow: 10px 10px 20px #B6B9BB, -10px -10px 20px #FFFFFF;
+    --whiteinputshadow: inset  10px 10px 20px #B6B9BB, inset  -10px -10px 20px #FFFFFF;
+    --inputwhiteborder: 1px solid #F3F3F3;
+    --modalwhiteboxshadow: 10px 10px 20px #666666, -10px -10px 20px #FFFFFF;
+    
+    --blackshadow: 10px 10px 20px #111111, -10px -10px 20px #333333;
+    --blackinputshadow: inset  10px 10px 20px #000000, inset  -10px -10px 20px #333333;
+    --inputblackborder: 1px solid #666666;
+    --neublack:linear-gradient(145deg, #333333, #000000);
+    --modalgradientcolorwhite1:rgba(55,55,55,.5);
+    --modalgradientcolorwhite2:rgba(0,0,0,.5);
+    --modalwhiteboxshadow: 10px 10px 20px #333333, -10px -10px 20px #000000;
+    
 }
 
 nav, modal, p, input, button, #input_container{margin:0; padding:0; display:block;}
@@ -7,26 +27,29 @@ nav, modal, p, input, button, #input_container{margin:0; padding:0; display:bloc
 .line_btn{display:inline; border-radius:50%; width:24px; height:24px; margin:0px 0px 0px 5px;}
 
 /*modal start*/
-modal{z-index:2; position:absolute; top:50px; width:40%; height:auto; right:50%; transform: translate(50%,0%); background: linear-gradient(145deg, rgba(200,200,200,.5), rgba(255,255,255,.5)); box-shadow: 10px 10px 20px #666666, -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit; padding:20 30 0 30;}
+modal{z-index:2; position:absolute; top:50px; width:40%; height:auto; right:50%; transform: translate(50%,0%); background: linear-gradient(145deg, var(--modalgradientcolor1), var(--modalgradientcolor2)); box-shadow: var(--modalblackboxshadow); border-radius:5px; border: var(--inputblackborder); color:inherit; padding:20 30 0 30;}
 table{width:100%; margin:30px auto 30px auto; }
 td{font-weight:bold; font-size:14px; line-height:20px; vertical-align:top;}
 /*modal end*/
 
 /*initial elements start*/
-body{background: #ECF0F3; color:#3B3B3B;}
-.neumorphism {background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: 10px 10px 20px #B6B9BB, -10px -10px 20px #FFFFFF; border-radius:17px; border:1px solid #F3F3F3; color:inherit;}
+body{background: var(--body); color:var(--whitecolor);}
+.neumorphism {background: var(--neublack); border-radius:17px; box-shadow: var(--blackshadow); border:1px solid rgba(0,0,0,.3); color:inherit;}
 .flex_container_row > .neumorphism{border:none;}
-input{background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: inset  10px 10px 20px #B6B9BB, inset  -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit;}
-button{background: linear-gradient(145deg, #FDFFFF, #D4D8DB); box-shadow: 10px 10px 20px #B6B9BB, -10px -10px 20px #FFFFFF; border-radius:5px; border:1px solid #F3F3F3; color:inherit; height:20px; cursor:pointer;}
+input{background: var(--neublack); box-shadow: var(--blackinputshadow); border-radius:5px; border: var(--inputblackborder); color:inherit;}
+button{background: var(--neublack); box-shadow: var(--blackshadow); border-radius:5px; border: var(--inputblackborder); color:inherit; height:20px; cursor:pointer;}
 img{margin: 0px auto 30px auto; width:64px; height:64px; display:block;}
 :focus{ outline-color:#B6B9BB; outline-offset:2px; outline:double;}
 
 .flex_content_row > div > p{font-weight:bold; font-size:14px; height:30px; valign:middle; line-height:30px;}
 .flex_content_row > div > input, #line{height:30px; valign:middle; line-height:30px; padding: 0 0 0 10px;}
+::placeholder {
+  color: var(--graycolor);
+}
 /*initial elements end*/
 
 /*justify start*/
-.flex_container_row{display:flex; flex-direction:row; position:absolute; top:0; bottom:0; right:0; left:0; overflow:hidden;}
+.flex_container_row{display:flex; flex-direction:row; position:absolute; top:0; bottom:0; right:0; left:0;}
 .flex_container_row > div:nth-of-type(1){flex:20%;}
 .flex_container_row > div:nth-of-type(2){flex:60%; padding-top:3%;}
 .flex_container_row > div:nth-of-type(3){flex:20%;}
@@ -50,7 +73,7 @@ img{margin: 0px auto 30px auto; width:64px; height:64px; display:block;}
 /*justify end*/
 
 .company_name{text-align: center; font-weight:bold;}
-button{border-radius:5px; outline:none; border:none; font-size:auto; font-weight:bold; width:64px; height:32px;}
+button{border-radius:5px; outline:none !important; border:none; font-size:auto; font-weight:bold; width:64px; height:32px;}
 .line_input{display:inline;}
 .breakline{}
 .hidden{visibility:hidden;}
