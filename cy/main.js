@@ -15,23 +15,23 @@ var gap =
 var gap2 = (Math.floor(bigtempline2*100)/100);
 
 if (bigtempline2 >= maxl) {
-document.getElementById("modal").innerHTML= "<table>"+
-"<tr><td class='tlabel'>Gap</td><td>:</td><td>"+ gap +" ("+ mmtoinch(gap)+")</td></tr>"+
-"<tr><td class='tlabel'>Strips</td><td>:</td><td>"+ templine +"</td></tr>"+
+document.getElementById("modal").innerHTML= "<table class='cyTableModal'>"+
+"<tr><td>Gap</td><td>:</td><td>"+ gap +" ("+ mmtoinch(gap)+")</td></tr>"+
+"<tr><td>Strips</td><td>:</td><td>"+ templine +"</td></tr>"+
 "<tr><td></td><td></td><td></td></tr>"+
 "<tr><td></td><td></td><td></td></tr>"+
-"<tr><td colspan='4' style='text-align:center;'><button id='close' onclick='fnClose()' style='height:32px; width:80px; border-radius:5px' class='line_btn' >Close</button></td></tr>"+
+"<tr><td colspan='4' style='text-align:center;'><button id='close' onclick='fnClose()' style='height:32px; width:80px; border-radius:5px' >Close</button></td></tr>"+
 "</table>";
 }
 else{
-    document.getElementById("modal").innerHTML= "<table>"+
-"<tr><td class='tlabel'>Gap</td><td>:</td><td>"+ gap +" ("+ mmtoinch(gap)+")</td></tr>"+
-"<tr><td class='tlabel'>Strips</td><td>:</td><td>"+ templine +"</td></tr>"+
+    document.getElementById("modal").innerHTML= "<table class='cyTableModal'>"+
+"<tr><td>Gap</td><td>:</td><td>"+ gap +" ("+ mmtoinch(gap)+")</td></tr>"+
+"<tr><td>Strips</td><td>:</td><td>"+ templine +"</td></tr>"+
 "<tr><td></td><td></td><td></td></tr>"+
-"<tr><td class='tlabel'>Bigger Gap</td><td>:</td><td>"+ gap2 +" ("+ mmtoinch(gap2)+")</td></tr>"+
-"<tr><td class='tlabel'>Bigger Strips</td><td>:</td><td>"+ bigtempline +"</td></tr>"+
+"<tr><td>Bigger Gap</td><td>:</td><td>"+ gap2 +" ("+ mmtoinch(gap2)+")</td></tr>"+
+"<tr><td>Bigger Strips</td><td>:</td><td>"+ bigtempline +"</td></tr>"+
 "<tr><td></td><td></td><td></td></tr>"+
-"<tr><td colspan='4' style='text-align:center;'><button id='close' onclick='fnClose()' style='height:32px; width:80px; border-radius:5px' class='line_btn' >Close</button></td></tr>"+
+"<tr><td colspan='4' style='text-align:center;'><button id='close' onclick='fnClose()' style='height:32px; width:80px; border-radius:5px' >Close</button></td></tr>"+
 "</table>";
 }
 
@@ -92,11 +92,11 @@ function input_change(h,w,maxL,minL){
     if(h !== "" && w !== "" && maxL !== "" && minL !== ""){
         fnCalcGap(h,w,maxL,minL);
         document.getElementById("modal").style.display = "block";
-        document.getElementsByClassName("flex_container_row")[0].style.filter = " blur(2px)";
+        document.getElementsByClassName("cyFlexContainer")[0].style.filter = " blur(2px)";
     }
 }
 
 function fnClose(){
-    document.getElementsByClassName("flex_container_row")[0].style.filter = "none";
+    document.getElementsByClassName("cyFlexContainer")[0].style.filter = "none";
     document.getElementById("modal").style.display = "none";
 }

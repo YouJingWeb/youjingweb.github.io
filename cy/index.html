@@ -6,51 +6,54 @@
     <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-    <div class="flex_container_row">
-        <div class="neumorphism">
+    <div class="cyFlexContainer">
+        <div class="cyFlex">
         </div>
         <!--content start-->
-        <div class="neumorphism">
-            <img class="neumorphism" src="cy.png"/>
-            <p class="company_name">CY Stainless Steel Enterprise</p>
-            
-            <div class="flex_content_row">
-                <div>
-                    <p>Height (mm)</p>
-                    <br>
-                    <p>Hollow (mm)</p>
-                    <br>
-                    <p>Long Gap (mm)</p>
-                    <br>
-                    <p>Short Gap (mm)</p>
-                    <br>
-                    <div class="breakline"></div>
-                    <p class="hidden">Lines</p>
-                    <br>
-                    <p class="hidden">Gap (mm)</p>
-                </div>
-                <div>
-                    <input placeholder="Height of inner object" autofocus id="h" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
-                    <br>
-                    <input placeholder="Width of hollow steel" id="w" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
-                    <br>
-                    <input placeholder="Maximum distance of gap" id="maxl" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
-                    <br>
-                    <input placeholder="Minimum distance of gap" id="minl" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
-                    <br>
-                    <div class="breakline"></div>
-                    <div id="input_container" class="hidden">
-                        <input readonly class="line_input" id="line" type="number" ></input>
-                        <button class="line_btn" onclick="dynamic_line(h.value,w.value,++line.value);">+</button>
-                        <button class="line_btn" onclick="dynamic_line(h.value,w.value,--line.value);">-</button>
-                    </div>
-                    <br>
-                    <input readonly class="hidden" id="gap" type="number" ></input>
-                </div>
-            </div>
+        <div class="cyFlex">
+            <img src="cy.png"/>
+            <p class="cyCompanyName">CY Stainless Steel Enterprise</p>
+            <table class="cyTableMain">
+                <tr>
+                    <td>Height</td>
+                    <td>:</td>
+                    <td><input placeholder="Height of inner object (mm)" autofocus id="h" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input></td>
+                </tr>
+                <tr>
+                    <td>Hollow</td>
+                    <td>:</td>
+                    <td><input placeholder="Width of hollow steel (mm)" id="w" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Long Gap</td>
+                    <td>:</td>
+                    <td><input placeholder="Maximum distance of gap (mm)" id="maxl" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Short Gap</td>
+                    <td>:</td>
+                    <td><input placeholder="Minimum distance of gap (mm)" id="minl" type="number" onchange="input_change(h.value,w.value,maxl.value,minl.value);"></input></td>
+                </tr>
+                <tr class="hidden">
+                    <td>Strips</td>
+                    <td>:</td>
+                    <td>
+                        <input id="line" readonly type="number" ></input>
+                        <button class="cyBtnStripe" onclick="dynamic_line(h.value,w.value,--line.value);">-</button>
+                        <button class="cyBtnStripe" onclick="dynamic_line(h.value,w.value,++line.value);">+</button>    
+                    </td>
+                </tr>
+                <tr class="hidden">
+                    <td>Gap</td>
+                    <td>:</td>
+                    <td><input readonly id="gap" type="number" ></input></td>
+                </tr>
+            </table>
         </div>
         <!--content end-->
-        <div class="neumorphism"></div>
+        <div class="cyFlex"></div>
     </div>
-    <modal id="modal" style="display:none;"></modal>
+    <modal id="modal"></modal>
 </body> 
