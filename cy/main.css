@@ -11,15 +11,15 @@
 
 /*neumorphism
 ============================================================*/
-.cyFlexContainer > .cyFlex {background: var(--backgroundcolor) url('img/leather.png')repeat 100% 100%;} 
+.cyFlexContainer {background: var(--backgroundcolor) url('img/leather.png')repeat 100% 100%;} 
 /*============================================================*/
 
 /*container
 ============================================================*/
 body{padding:0; margin:0;}
-.cyFlexContainer{display:flex; height:100%;}
+.cyFlexContainer{display:flex; height:100vh;}
 .cyFlexContainer > .cyFlex {flex-wrap:wrap; flex: 33%;}
-.cyTableMain{width:100%; border-collapse: collapse; font:inherit;}
+.cyTableMain{width:90%; border-collapse: collapse; font:inherit;}
 .cyTableMain tr td{line-height:15px; padding:5px;}
 .cyTableMain tr td:nth-child(1){width: 24%; font-weight: bold;}
 .cyTableMain tr td:nth-child(2){width: 1%; font-weight: bold;}
@@ -28,12 +28,11 @@ body{padding:0; margin:0;}
 
 /*UI
 ============================================================*/
-img{height:64px; width:64px; position:relative; left:50%; transform: translate(-50%, 0%); margin:30 0 0 0px; box-shadow:var(--box-shadow); border-radius:5px; }
+img{height:64px; width:64px; position:relative; left:50%; transform: translate(-50%, 0%); margin:30px 0px 0px 0px; box-shadow:var(--box-shadow); border-radius:5px; }
 .cyCompanyName{font-weight:bold; text-align:center;}
 input{width:100%; padding-left: 15px; height:35px; box-shadow:inset 5px 5px 5px 1px #333333; outline:none; background: rgba(255,255,255,.5);}
-#line{float: left; width:75%;}
-.cyBtnStripe{float: right; width:24px; height:24px; border-radius:50%; border:none; font-size:18px; font-weight:bold; margin-left:5px;}
-.cyBtnStripe:after{clear:both;}
+#line{float: left; width:50%;}
+.cyBtnStripe{width:24px; height:24px; border-radius:50%; border:none; font-size:18px; font-weight:bold; margin-left:10px; line-height:15px; vertical-align:middle; margin-top:6px;}
 #modal{position:absolute; top:0; left:50%; transform: translate(-50%, 0%);}
 .hidden{visibility: hidden;}
 ::placeholder{color: var(--placeholder);}
@@ -43,12 +42,25 @@ button{background: var(--backgroundcolor) url('img/leather.png')repeat 100% 100%
 
 /*handphone
 ============================================================*/
-@media (orientation: portrait){
+@media (orientation: portrait) and (max-device-width:450px){
     .cyFlexContainer > .cyFlex:nth-child(1) {display: none;}
     .cyFlexContainer > .cyFlex:nth-child(2) {flex-wrap:wrap; flex: 100%;}
     .cyFlexContainer > .cyFlex:nth-child(3) {display: none;}
     .cyTableModal{width:90vw;}
     .cyTableModal tr td:nth-child(1) {width:30%;}
     .cyTableModal tr td:nth-child(3) {width:70%;}
+}
+
+@media (orientation: landscape) and (max-device-width:850px){
+    .cyFlexContainer{height:auto;}
+    .cyFlexContainer > .cyFlex:nth-child(1) {display: none;}
+    .cyFlexContainer > .cyFlex:nth-child(2) {flex-wrap:wrap; flex: 100%;}
+    .cyFlexContainer > .cyFlex:nth-child(3) {display: none;}
+    .cyTableModal{width:90vw;}
+    .cyTableModal tr td:nth-child(1) {width:30%;}
+    .cyTableModal tr td:nth-child(3) {width:70%;}
+    .cyTableMain tr td:nth-child(1){width: 14%; font-weight: bold;}
+    .cyTableMain tr td:nth-child(2){width: 1%; font-weight: bold;}
+    .cyTableMain tr td:nth-child(3){width: 85%;}
 }
 /*============================================================*/

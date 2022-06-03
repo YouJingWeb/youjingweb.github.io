@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
     <title> CY Stainless Steel Enterprise</title>
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -41,8 +42,8 @@
                     <td>:</td>
                     <td>
                         <input id="line" readonly type="number" ></input>
+                        <button class="cyBtnStripe" onclick="dynamic_line(h.value,w.value,++line.value);">+</button>
                         <button class="cyBtnStripe" onclick="dynamic_line(h.value,w.value,--line.value);">-</button>
-                        <button class="cyBtnStripe" onclick="dynamic_line(h.value,w.value,++line.value);">+</button>    
                     </td>
                 </tr>
                 <tr class="hidden">
