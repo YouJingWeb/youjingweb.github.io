@@ -33,7 +33,7 @@ img{height:64px; width:64px; position:relative; left:50%; transform: translate(-
 input{width:100%; padding-left: 15px; height:35px; box-shadow:inset 5px 5px 5px 1px #333333; outline:none; background: rgba(255,255,255,.5);}
 #line{float: left; width:50%;}
 .cyBtnStripe{width:24px; height:24px; border-radius:50%; border:none; font-size:18px; font-weight:bold; margin-left:10px; line-height:15px; vertical-align:middle; margin-top:6px;}
-#modal{position:absolute; top:0; left:50%; transform: translate(-50%, 0%);}
+#modal{position:absolute; top:10%; left:50%; transform: translate(-50%, 0%);}
 .hidden{visibility: hidden;}
 ::placeholder{color: var(--placeholder);}
 .cyTableModal{margin:30 0 0 0px; background: rgba(0,0,0,.3); padding:10px; box-shadow:var(--box-shadow);}
