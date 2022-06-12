@@ -4,6 +4,7 @@
     display: block;
     font-size:14px;
     color:#FFFFFF;
+    -webkit-tap-highlight-color: transparent;
     --backgroundcolor: #333333;
     --placeholder: #555555;
     --box-shadow: 5px 5px 5px 1px #333333,-5px -5px 5px 1px rgba(0,0,0,.1);
@@ -58,7 +59,6 @@ input:checked + .slider:before {content:"-"; transform: translateX(26px);}
 .slider.round:before {border-radius: 50%;}
 hr{box-shadow:var(--box-shadow);}
 ::selection {color: none; background: none;}
--webkit-tap-highlight-color: transparent;
 /*============================================================*/
 
 /*animation
