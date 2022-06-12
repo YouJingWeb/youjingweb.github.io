@@ -102,14 +102,14 @@ function fnClose(){
 }
 
 function fnGap(){
-    document.getElementsByClassName("cal_gap")[0].style.animation = "move 2s";
+    document.getElementsByClassName("cal_gap")[0].style.animation = "move .5s";
     document.getElementsByClassName("cal_gap")[0].style.top = "0px";
     document.getElementsByClassName("cal_inch")[0].style.animationName = "moveinchout";
     document.getElementsByClassName("cal_inch")[0].style.top = "-1000px";
 }
 
 function fnInch(){
-    document.getElementsByClassName("cal_inch")[0].style.animation = "moveinch 2s";
+    document.getElementsByClassName("cal_inch")[0].style.animation = "moveinch .5s";
     document.getElementsByClassName("cal_inch")[0].style.top = "-450px";
     document.getElementsByClassName("cal_gap")[0].style.animationName = "moveout";
     document.getElementsByClassName("cal_gap")[0].style.top = "-1000px";
