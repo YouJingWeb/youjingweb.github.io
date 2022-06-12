@@ -17,18 +17,25 @@
 /*container
 ============================================================*/
 body{padding:0; margin:0;}
-.cyFlexContainer{display:flex; height:100vh;}
+.cyFlexContainer{display:flex; flex-direction:row; height:100vh;}
 .cyFlexContainer > .cyFlex {flex-wrap:wrap; flex: 33%;}
 .cyTableMain{width:90%; border-collapse: collapse; font:inherit;}
 .cyTableMain tr td{line-height:15px; padding:5px;}
 .cyTableMain tr td:nth-child(1){width: 24%; font-weight: bold;}
 .cyTableMain tr td:nth-child(2){width: 1%; font-weight: bold;}
 .cyTableMain tr td:nth-child(3){width: 75%;}
+.cyMenuContainer{position:absolute; flex-direction:column; top:50%; transform:translate(0%, -50%);}
+.cal_inch{position:relative; top:-1000px;}
+.cyTableCalc{width:100%; text-align:center;}
+.cyTableCalc input{width:80px;}
+.cyTableCalc td{padding-bottom:10px;}
+#cycalans{width:100%;}
+.cyMenuContainerM{display:none;}
 /*============================================================*/
 
 /*UI
 ============================================================*/
-img{height:64px; width:64px; position:relative; left:50%; transform: translate(-50%, 0%); margin:30px 0px 0px 0px; box-shadow:var(--box-shadow); border-radius:5px; }
+img{height:64px; width:64px; position:relative; left:50%; transform: translate(-50%, 0%); margin:30px 0px 0px 0px; box-shadow:var(--box-shadow); border-radius:5px; background:rgba(0,0,0,.2);}
 .cyCompanyName{font-weight:bold; text-align:center;}
 input{width:100%; padding-left: 15px; height:35px; box-shadow:inset 5px 5px 5px 1px #333333; outline:none; background: rgba(255,255,255,.5);}
 #line{float: left; width:50%;}
@@ -38,6 +45,33 @@ input{width:100%; padding-left: 15px; height:35px; box-shadow:inset 5px 5px 5px 
 ::placeholder{color: var(--placeholder);}
 .cyTableModal{margin:30 0 0 0px; background: rgba(0,0,0,.3); padding:10px; box-shadow:var(--box-shadow);}
 button{background: var(--backgroundcolor) url('img/leather.png')repeat 100% 100%; color: var(--fontcolor); border:none; outline:none; cursor:pointer; box-shadow:var(--box-shadow);}
+.btn_menu{height:64px; width:64px; margin:5px; box-shadow:var(--box-shadow); border-radius:10px; background:rgba(0,0,0,.2);}
+
+.switch {left:50%; transform:translate(50%,0%); position: relative; display: inline-block; width: 60px; height: 34px;}
+.switch input { opacity: 0; width: 0; height: 0;}
+.slider {box-shadow:var(--box-shadow); position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255,10,10,.4); transition: .4s;}
+.slider:before { font-weight:bold; font-size:24px; color:black; position: absolute; content: "+"; height: 26px; width: 26px; left: 4px; bottom: 4px; background-color: white; box-shadow: inset -2px -2px 5px 1px #333333,2px 2px 5px 1px rgba(0,0,0,.1); transition: .4s;}
+input:checked + .slider {background-color: rgba(0,0,0,.4); }
+input:focus + .slider {box-shadow: 0 0 1px #2196F3;}
+input:checked + .slider:before {content:"-"; transform: translateX(26px);}
+.slider.round {border-radius: 34px;}
+.slider.round:before {border-radius: 50%;}
+hr{box-shadow:var(--box-shadow);}
+/*============================================================*/
+
+/*animation
+============================================================*/
+.cal_gap{position:relative;}
+.cal_gap{animation: move .5s; animation-timing-function:linear;}
+
+.cyMenuContainer{position:relative;}
+.cyMenuContainer{animation: menumove .5s; animation-timing-function:linear;}
+
+@keyframes move{from{top:-1000px;} to{top:0px;}}
+@keyframes moveout{from{top:0px;} to{top:-1000px;}}
+@keyframes moveinch{from{top:-1000px;} to{top:-450px;}}
+@keyframes moveinchout{from{top:-450px;} to{top:-1000px;}}
+@keyframes menumove{from{left:-250px;} to{left:0px;}}
 /*============================================================*/
 
 /*handphone
@@ -49,6 +83,17 @@ button{background: var(--backgroundcolor) url('img/leather.png')repeat 100% 100%
     .cyTableModal{width:90vw;}
     .cyTableModal tr td:nth-child(1) {width:30%;}
     .cyTableModal tr td:nth-child(3) {width:70%;}
+    .cyMenuContainerM{display:inline-block;}
+    .cyMenuContainerM div button{margin-bottom:20px; width:48px; height:48px;}
+    .cyMenuContainerM{position:absolute; display:flex; flex-direction:row; bottom:0px; left:50%; transform:translate(-50%, 0%);}
+    .cyMenuContainerM{animation: menumove .5s; animation-timing-function:linear;}
+    
+    @keyframes move{from{top:-1000px;} to{top:0px;}}
+    @keyframes moveout{from{top:0px;} to{top:-1000px;}}
+    @keyframes moveinch{from{top:-1000px;} to{top:-450px;}}
+    @keyframes moveinchout{from{top:-450px;} to{top:-1000px;}}
+    @keyframes menumove{from{bottom:-250px;} to{bottom:0px;}}
+
 }
 
 @media (orientation: landscape) and (max-device-width:850px){

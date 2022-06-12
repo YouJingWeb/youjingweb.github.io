@@ -100,3 +100,40 @@ function fnClose(){
     document.getElementsByClassName("cyFlexContainer")[0].style.filter = "none";
     document.getElementById("modal").style.display = "none";
 }
+
+function fnGap(){
+    document.getElementsByClassName("cal_gap")[0].style.animation = "move 2s";
+    document.getElementsByClassName("cal_gap")[0].style.top = "0px";
+    document.getElementsByClassName("cal_inch")[0].style.animationName = "moveinchout";
+    document.getElementsByClassName("cal_inch")[0].style.top = "-1000px";
+}
+
+function fnInch(){
+    document.getElementsByClassName("cal_inch")[0].style.animation = "moveinch 2s";
+    document.getElementsByClassName("cal_inch")[0].style.top = "-450px";
+    document.getElementsByClassName("cal_gap")[0].style.animationName = "moveout";
+    document.getElementsByClassName("cal_gap")[0].style.top = "-1000px";
+}
+
+function fnCalcInch(i1,o1,i2,o2,t){
+    if((i1 == 0 && o1 <= 0) || (i2 == 0 && o2 <= 0)) return 0;
+    else{
+        if(o1==="") o1 = 0;
+        if(o2==="") o2 = 0;
+    }
+    var ans = 0;
+    switch(t){
+        case true: //minus
+            ans = (parseFloat(i1 * 8) + parseFloat(o1)) - parseFloat((i2 * 8) + parseFloat(o2)); 
+            break;
+        case false: //plus
+            ans = (parseFloat(i1 * 8) + parseFloat(o1)) + parseFloat((i2 * 8) + parseFloat(o2));
+            break;
+    }
+    var inchans = ans/8;
+    var inch = inchans.toString().split(".");
+    document.getElementById("ansinch").value = inch[0];
+    var ounceans = ans%8;
+    document.getElementById("ansounce").value = ounceans;
+    
+}
