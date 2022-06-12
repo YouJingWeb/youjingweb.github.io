@@ -58,6 +58,7 @@ input:checked + .slider:before {content:"-"; transform: translateX(26px);}
 .slider.round:before {border-radius: 50%;}
 hr{box-shadow:var(--box-shadow);}
 ::selection {color: none; background: none;}
+-webkit-tap-highlight-color: transparent;
 /*============================================================*/
 
 /*animation
