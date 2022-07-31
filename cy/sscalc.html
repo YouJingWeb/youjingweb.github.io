@@ -1,10 +1,10 @@
 <script>
 function calc(x,y){
-var average_line = (x%5) - 1;
+var average_line = Math.trunc(x/5) - 1;
 var resultcm = (((x*2.54) + (y/8)) - (average_line * 3.81))/(average_line+1);
 var resultinch = Math.trunc(resultcm/2.54);
 var resultounce = Math.trunc(((resultcm/2.54) - resultinch)*16) /2;
-alert(resultinch + " inch " + resultounce + " ounch");
+alert("strips: " + average_line + "\n" + resultinch + " inch " + resultounce + " ounch");
 }
 
 </script>
