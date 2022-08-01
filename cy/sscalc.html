@@ -4,7 +4,7 @@ var average_line = Math.trunc(x/5) - 1;
 if(average_line <= 0)average_line = 1;
 var resultcm = (((x*2.54) + (y/8)) - (average_line * 3.81))/(average_line+1);
 var resultinch = Math.trunc(resultcm/2.54);
-var resultounce = Math.trunc(((resultcm/2.54) - resultinch)*16) /2;
+var resultounce =(((resultcm/2.54) - resultinch)*8);
 alert("strips: " + average_line + "\n" + resultinch + " inch " + resultounce + " ounch");
 }
 
