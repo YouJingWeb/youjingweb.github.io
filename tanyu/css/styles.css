@@ -6,7 +6,6 @@
   /*========== Colors ==========*/
   --first-color: #fa6a03;
   --title-color: #fff;
-  --text-color: hsl(231, 4%, 45%);
   --body-color: #fff;
   --container-color: #202020;
 
@@ -34,7 +33,6 @@ html {
 
 body {
   font-family: var(--body-font);
-  color: var(--text-color);
 }
 
 ul {
