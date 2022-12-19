@@ -58,7 +58,7 @@ h2{font-size: 18px; color:#fff; padding:10px;}
 
 footer{padding-bottom:50px; padding-top:50px;}
 
-.container1{max-height:1px; overflow:hidden;}
+#container2{max-height:1px; overflow:hidden;}
 </style>
  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="icon" href="img/logo.png" type="image/x-icon">
@@ -71,7 +71,7 @@ footer{padding-bottom:50px; padding-top:50px;}
 <img class="main_logo" src="img/logo_large.png">
 <!--logo-->
 
-<div class="container1">
+<div id="container1">
 <!--鱼类品种部分-->
 <h2>鱼类</h2>
 <button class="collapsible">凌波鱼</button>
@@ -370,7 +370,7 @@ footer{padding-bottom:50px; padding-top:50px;}
 <!--赠品部分-->
 </div>
 
-<div class="container2">
+<div id="container2">
 <h2>前厅员工守则</h2>
 <button class="collapsible">咨客人员</button>
 <div class="content">
@@ -463,6 +463,50 @@ footer{padding-bottom:50px; padding-top:50px;}
   </p>        
 </div>
 
+<button class="collapsible">传菜人员</button>
+<div class="content">
+  <p>
+	  <ul>
+		<li style="margin-left:20px; list-style:number">菜品出餐口存放不超过2分钟， 检查标准</li>
+		<li style="margin-left:20px; list-style:number">传菜口放置抹布，用来檫试托盘及台面，保持清洁</li>
+		<li style="margin-left:20px; list-style:number">在出菜口核对菜品是否与小票一致 （留意是否有特殊要求）</li>
+		<li style="margin-left:20px; list-style:number">确保菜品品质，熟度，温度，观感, 若无问题可上菜</li>
+		<li style="margin-left:20px; list-style:number">菜品出餐口存放不超过2分钟， 检查标准</li>
+		<li style="margin-left:20px; list-style:number">应用“小心烫”词语获得周围人的注意，以免发生意外/受伤</li>
+		<li style="margin-left:20px; list-style:number">留意号座是否有小孩，配合服务先安顿小孩再上菜</li>
+		<li style="margin-left:20px; list-style:number">把菜上到座位后，在座上的小单把已上菜品划单，方便检查遗漏</li>
+		<li style="margin-left:20px; list-style:number">小单的菜品上齐后，告知客人菜品已上齐</li>
+	  </ul>
+  </p>
+</div>
+
+<button class="collapsible">收银人员</button>
+<div class="content">
+  <p>
+	  <ul>
+		<li style="margin-left:20px; list-style:number">
+			<p>礼貌迎接顾客从客人手中接取座单</p>
+			<p class="bluetext">您好，这里结账</p>
+		</li>
+		<li style="margin-left:20px; list-style:number">
+			<p>核对座号，打印账单</p>
+			<p class="bluetext">您好，本次共消费马币xx</p>
+		</li>
+		<li style="margin-left:20px; list-style:number">
+			<p>询问付款方式（现金/银行卡/支付宝 etc)</p>
+			<p class="bluetext">-请问要用什么方式付款呢？</p>
+		</li>
+		<li style="margin-left:20px; list-style:number">	
+			<p>完成付款后打印收据并交给客户</p>
+			<p class="bluetext">您好，这是您的收据</p>
+		</li>
+		<li style="margin-left:20px; list-style:number">
+			<p>礼貌欢送客人</p>
+			<p class="bluetext">谢谢光顾探鱼，欢迎下次再来！</p>
+		</li>
+	  </ul>
+  </p>
+</div>
 
 </div>
 <footer>
@@ -470,35 +514,35 @@ footer{padding-bottom:50px; padding-top:50px;}
 <!--menu navigation bar-->
 <nav class="nav">
             <ul class="nav__list">
-                <a href="#home" class="nav__link active-link">
+                <a href="#home" class="nav__link active-link" onclick="fnMenu();">
                     <i class="ri-menu-line"></i>
                     <span class="nav__name">
                         菜单
                     </span>
                 </a>
 
-                <a href="#profile" class="nav__link">
+                <a href="#profile" class="nav__link" onclick="fnWorker();">
                     <i class="ri-user-line"></i>
                     <span class="nav__name">
                         员工守则
                     </span>
                 </a>
 
-                <a href="#message" class="nav__link">
+                <a href="#message" class="nav__link" onclick="alert('Not Implement Yet');">
                     <i class="ri-chat-3-line"></i>
                     <span class="nav__name">
                         暂且保留
                     </span>
                 </a>
 
-                <a href="#mail" class="nav__link">
+                <a href="#mail" class="nav__link" onclick="alert('Not Implement Yet');">
                     <i class="ri-mail-open-line"></i>
                     <span class="nav__name">
                         暂且保留
                     </span>
                 </a>
 
-                <a href="#settings" class="nav__link">
+                <a href="#settings" class="nav__link" onclick="alert('Not Implement Yet');">
                     <i class="ri-settings-line"></i>
                     <span class="nav__name">
                         暂且保留
@@ -545,6 +589,19 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
+}
+
+function fnMenu(){
+	document.getElementById("container1").style.overflow="visible";
+	document.getElementById("container1").style.maxHeight="unset";
+	document.getElementById("container2").style.overflow="hidden";
+	document.getElementById("container2").style.maxHeight="1px";
+}
+function fnWorker(){
+	document.getElementById("container2").style.overflow="visible";
+	document.getElementById("container2").style.maxHeight="unset";
+	document.getElementById("container1").style.overflow="hidden";
+	document.getElementById("container1").style.maxHeight="1px";
 }
 </script>
 <script src="js/main.js"></script>
