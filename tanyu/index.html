@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>探鱼员工手册</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <head>
+  <title>探鱼员工手册</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <style>
-body{background:#202020; color:#fff; font-size:14px; color:#dbd9d9;}
+body{background:#333333; font-size:14px; color:#fde8d9;}
 
 .redtext{color:#FF726F; }
 
@@ -12,47 +12,9 @@ body{background:#202020; color:#fff; font-size:14px; color:#dbd9d9;}
 
 .bluetext{color:#87CEEB;}
 
-h2{font-size: 18px; color:#fff; padding:10px;}
+h2{font-size: 18px; color:#fde8d9; padding:10px;}
 
-.collapsible {
-  background-color: #fa6a03;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  margin-bottom:5px;
-  margin-top:5px;
-}
 
-.active, .collapsible:hover {
-  background-color: #fd4f00;
-}
-
-.collapsible:after {
-  content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #383838;
-  
-  line-height:3;
-}
 
 .main_logo{display:block; margin:0 auto; padding-top:5%;}
 
@@ -177,7 +139,7 @@ footer{padding-bottom:50px; padding-top:50px;}
   <div style="padding:5px; display:flex;">
 	<img style="margin:10px;" src="img/main/suancai.png" height="160px" width="160px";>
 	<p style="margin:10px; line-height:1.3rem;">
-		口味：<span class="greentext">口味偏酸</span>
+		口味：<span class="greentext">不辣，酸味偏重</span>
 		<br>
 		辅菜：紫洋葱， 炸蒜头， 功夫土豆片， 青柠檬片， 蒜苗丁
 	</p>
@@ -188,7 +150,7 @@ footer{padding-bottom:50px; padding-top:50px;}
   <div style="padding:5px; display:flex;">
 	<img style="margin:10px;" src="img/main/suanxiang.png" height="160px" width="160px";>
 	<p style="margin:10px; line-height:1.3rem;">
-		口味：<span class="greentext">不辣</span>
+		口味：<span class="greentext">不辣， 口味偏淡</span>
 		<br>
 		辅菜：炸葱头，黄瓜条， 胡萝卜条， 红美人丁，蒜苗，紫洋葱，牛肉，茄子
 	</p>
@@ -520,7 +482,7 @@ footer{padding-bottom:50px; padding-top:50px;}
 		<li style="margin-left:20px; list-style:number">疫情期间所需要的消毒喷雾</li>
 		<li style="margin-left:20px; list-style:number">多余的消毒喷雾抹干净</li>
 	  </ul>
-  </p>        
+  </p>
 </div>
 
 <button class="collapsible">传菜人员</button>
@@ -556,7 +518,7 @@ footer{padding-bottom:50px; padding-top:50px;}
 			<p>询问付款方式(现金/银行卡/支付宝 etc)</p>
 			<p class="bluetext">-请问要用什么方式付款呢？</p>
 		</li>
-		<li style="margin-left:20px; list-style:number">	
+		<li style="margin-left:20px; list-style:number">
 			<p>完成付款后打印收据并交给客户</p>
 			<p class="bluetext">您好，这是您的收据</p>
 		</li>
@@ -647,7 +609,7 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-    } 
+    }
   });
 }
 
