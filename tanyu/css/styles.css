@@ -4,27 +4,15 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   /*========== Colors ==========*/
-  --first-color: #fa6a03;
-  --title-color: #fff;
-  --body-color: #fff;
-  --container-color: #333;
+  --first-color: #f7a168; /*light orange*/
+  --second-color: #f58a42; /*dark orange*/
+  --base-first-color: #333333;/*base black*/
+  --text-color: #fff;
+  
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
   --tiny-font-size: .625rem;
-}
-
-@media screen and (min-width: 968px) {
-  :root {
-    --tiny-font-size: .688rem;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  body {
-	  max-width: 500px;
-	  margin:0 auto;
-  }
 }
 
 /*=============== BASE ===============*/
@@ -65,7 +53,7 @@ a {
 
 .container h2 {
   text-align: center;
-  color: var(--title-color);
+  color: var(--text-color);
 }
 
 .nav {
@@ -75,7 +63,7 @@ a {
   right: 0;
   width: 328px;
   height: 72px;
-  background-color: var(--container-color);
+  background-color: var(--second-color);
   box-shadow: 0 8px 32px hsla(231, 44%, 45%, .2);
   margin: 0 auto;
   padding: 1.5rem .5rem;
@@ -97,7 +85,7 @@ a {
 
 .nav__link i {
   font-size: 1.5rem;
-  color: var(--title-color);
+  color: var(--text-color);
   z-index: 20;
   transition: .3s;
 }
@@ -109,7 +97,7 @@ a {
   transition: .4s;
   transform: translateY(50px);
   z-index: 20;
-  color: var(--body-color);
+  color: var(--text-color);
   opacity: 0;
 }
 
@@ -118,13 +106,13 @@ a {
   position: absolute;
   left: 5px;
   bottom: 0;
-  fill: var(--first-color);
+  fill: #fa6a03;
   transition: .3s;
 }
 
 /* Active link */
 .active-link i {
-  color: var(--body-color);
+  color: var(--text-color);
 }
 
 .active-link .nav__name {
@@ -153,6 +141,48 @@ a {
   transform: translateX(calc(56px * 4));
 }
 
+/*==========collapsible==========*/
+.collapsible {
+  background-color: #f58a42;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-bottom:5px;
+  margin-top:5px;
+}
+
+.active, .collapsible:hover {
+  background-color: #fa6a03;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #383838;
+  
+  line-height:3;
+}
+/*==========collapsible==========*/
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
@@ -170,5 +200,8 @@ a {
   .nav {
     zoom: 1.1;
   }
-  body{margin:0 auto; width:800px;}
-}	
+  body{margin:0 auto; width:800px; max-width: 500px;}
+  :root {
+    --tiny-font-size: .688rem;
+  }
+}
