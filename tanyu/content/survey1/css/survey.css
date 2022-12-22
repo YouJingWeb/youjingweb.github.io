@@ -120,10 +120,11 @@ textarea:placeholder-shown {
 @media screen and (max-width: 500px) {
   .containerMain{width:100%; margin:0; min-width:100%; max-width:100%;}
   body{margin:0; padding:0; display:block; }
-  .main_logo{margin:0 auto; display:block;}
-  .containerSecond{display: flex; flex-wrap: wrap; font-size: 30px; text-align: center;}
-  .containerSecond div:nth-child(1){flex:20%;}
-  .containerSecond div:nth-child(2){flex:70%;}
+  .main_logo{margin:0 auto; display:block; padding-top:10%;}
+  .containerSecond{display: flex; flex-wrap: wrap; font-size: 30px; text-align: center; padding-top:10%;}
+  .containerSecond div:nth-child(1){flex:20%; }
+  .containerSecond div:nth-child(2){flex:70%; }
+  .containerSecond div:nth-child(3){padding-top:5%;}
   .containerSecond div:nth-child(4){flex:100%;}
   .containerSecond div:nth-child(5){flex:100%;}
 }
