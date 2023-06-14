@@ -324,7 +324,7 @@ function fnClick(chkboxName){
 	for (var i=0; i<checkboxes.length; i++) {
 	// And stick the checked ones onto an array...
 		if (checkboxes[i].checked) {
-			list += checkboxes[i].value + "&#9252; &#x2424;"
+			list += checkboxes[i].value + "%0a"
 		}
 	}
 location.href="https://wa.me/601128724776?text="+list;	
