@@ -1,59 +1,374 @@
-Drinks </br>
-==================</br>
-							hot   cold</br>
-DR01 Panama Passion Fruit	 -     10</br>
-DR02 Ice Lemon Tea   	     6      6</br>
-DR03 Lemon Grass		     6      6</br>
-DR04 Honey Lemon	         6      6</br>
-DR05 Coconut Milk Shake		 -     13</br>
-DR06 Thai Milk Tea			 -	   14</br>
-</br>
-Soft Drinks</br>
-============</br>
-SD01 Regular Coke    6</br>
-SD02 100 Plus 		 6</br>
-SD03 Sprite			 6</br>
-</br>
-Coffee</br>
-============</br>
-							hot     cold</br>
-CF01 Cold Coffee with milk    -       12</br>
-	 (Without Ice) </br>
-CF02 Americano Honey Ice      -       12</br>
-CF03 Dirty Latte              -       14</br>
-CF04 Cappucino                9       10</br>
-CF05 Americano                7        8</br>
-CF06 Latte                   10       11</br>
-CF07 Green Tea Latte         11       12</br>
-CF08 Mocha					 11		  12</br>
-CF09 Expresso			      7        -</br>
-CF09 Extra-shot			      3        -</br>
-</br>
-Tea By Cup</br>
-===============</br>
-						 hot     cold</br>
-TE01 Japanese Green Tea    7        8</br>
-TE02 Chamomile			   7        8</br>
-TE03 Earl Grey   		   7        8</br>
-TE04 English Tea     	   7        8v
-</br>
-Beer (Mug)</br>
-=================</br>
-					mugs   10 mugs</br>
-B01 Pearl River       14   	   112</br>
-B02 Tiger             16	   120</br>
-B03 Guinesse Stout    19	   160</br>
-</br>
-Cocktail / Moctail</br>
-==================</br>
-					 (with alcohol)    (non-alcohol)</br>
-CT01 Thai Tropical   	  28				24</br>
-CT02 Pom Pom Gimlet       28				24</br>
-CT03 Tropical Suprise     28				24</br>
-</br>
-Wine (bottle)</br>
-=================</br>
-W01 Red Wine    98</br>
-W02 White Wine 148</br>
-</br>
-*note corkage fee RM30.00 per bottle
+<style>
+ .data{
+	text-align:center;
+ }
+ 
+ .total{
+	text-align:right;
+ }
+ 
+ .code{
+	text-align:left;
+ }
+ td{border:1px solid black;}
+ table{border-collapse:collapse; width:100%;}
+ .border-right{border-right:none; background:#bababa;}
+ .border-left{border-left:none; background:#bababa;}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<table>
+	<tr>
+		<td colspan=2 class='data'><b>[16th June 2023]<br>(Fri)</b></td>
+		<td colspan=2 class='data'><b>[18th June 2023]<br>(Sun)</b></td>
+	</tr>
+	<tr>
+		<td colspan=2 class='code border-right'><b>Rice & Noodles</b></td>
+		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("RN");'>+</td>
+	</tr>
+	<tr id='RN' style='display:none;'>
+		<td colspan=4>
+			<table width='100%'>
+				<tr>
+					<td class='code'>RN01</td>
+					<td class='total'>0</td>
+					<td class='code'>RN01</td>
+					<td class='total'>2</td>
+				</tr>
+				<tr>
+					<td class='code'>RN02</td>
+					<td class='total'>0</td>
+					<td class='code'>RN02</td>
+					<td class='total'>1</td>
+				</tr>
+				<tr>
+					<td class='code'>RN03</td>
+					<td class='total'>0</td>
+					<td class='code'>RN03</td>
+					<td class='total'>3</td>
+				</tr>
+				<tr>
+					<td class='code'>RN04</td>
+					<td class='total'>0</td>
+					<td class='code'>RN04</td>
+					<td class='total'>1</td>
+				</tr>
+				<tr>
+					<td class='code'>RN05</td>
+					<td class='total'>3</td>
+					<td class='code'>RN05</td>
+					<td class='total'>0</td>
+				</tr>
+				<tr>
+					<td class='code'>RN06</td>
+					<td class='total'>1</td>
+					<td class='code'>RN06</td>
+					<td class='total'>0</td>
+				</tr>
+				<tr>
+					<td class='code'>RN07</td>
+					<td class='total'>2</td>
+					<td class='code'>RN07</td>
+					<td class='total'>0</td>
+				</tr>
+				<tr>
+					<td class='code'>RN08</td>
+					<td class='total'>3</td>
+					<td class='code'>RN08</td>
+					<td class='total'>1</td>
+				</tr>
+				<tr>
+					<td class='code'>RN10</td>
+					<td class='total'>2</td>
+					<td class='code'>RN10</td>
+					<td class='total'>1</td>
+				</tr>
+				<tr>
+					<td class='code'>RN11</td>
+					<td class='total'>0</td>
+					<td class='code'>RN11</td>
+					<td class='total'>1</td>
+				</tr>
+				<tr>
+					<td class='code'>RN13</td>
+					<td class='total'>0</td>
+					<td class='code'>RN13</td>
+					<td class='total'>1</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 class='code border-right'><b>Western Food</b></td>
+		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("WS");'>+</td>
+	</tr>
+	<tr id='WS' style='display:none;'>
+		<td colspan=4>
+			<table width='100%'>
+				<tr>
+					<td class='code'>WS01</td>
+					<td class='total'>0</td>
+					<td class='code'>WS01</td>
+					<td class='total'>1</td>
+				</tr>
+				<tr>
+					<td class='code'>WS02</td>
+					<td class='total'>1</td>
+					<td class='code'>WS02</td>
+					<td class='total'>0</td>
+				</tr>
+				<tr>
+					<td class='code'>WS05</td>
+					<td class='total'>0</td>
+					<td class='code'>WS05</td>
+					<td class='total'>1</td>
+				</tr>
+				<tr>
+					<td class='code'>WS06</td>
+					<td class='total'>0</td>
+					<td class='code'>WS06</td>
+					<td class='total'>1</td>
+				</tr>				
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 class='code border-right'><b>Dinner Set</b></td>
+		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("DN");'>+</td>
+	</tr>
+	<tr id='DN' style='display:none;'>
+		<td colspan=4>
+			<table width='100%'>
+				<tr>
+					<td class='code'>DN01</td>
+					<td class='total'>0</td>
+					<td class='code'>DN01</td>
+					<td class='total'>3</td>
+				</tr>
+				<tr>
+					<td class='code'>DN02</td>
+					<td class='total'>0</td>
+					<td class='code'>DN02</td>
+					<td class='total'>1</td>
+				</tr>
+				<tr>
+					<td class='code'>DN04</td>
+					<td class='total'>4</td>
+					<td class='code'>DN04</td>
+					<td class='total'>1</td>
+				</tr>
+				<tr>
+					<td class='code'>DN05</td>
+					<td class='total'>0</td>
+					<td class='code'>DN05</td>
+					<td class='total'>1</td>
+				</tr>
+				<tr>
+					<td class='code'>DN10</td>
+					<td class='total'>1</td>
+					<td class='code'>DN10</td>
+					<td class='total'>0</td>
+				</tr>				
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 class='code border-right'><b>Finger Food</b></td>
+		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("FF");'>+</td>
+	</tr>
+	<tr id='FF' style='display:none;'>
+		<td colspan=4>
+			<table width='100%'>
+				<tr>
+					<td class='code'>FF02</td>
+					<td class='total'>2</td>
+					<td class='code'>FF02</td>
+					<td class='total'>1</td>
+				</tr>
+				<tr>
+					<td class='code'>FF03</td>
+					<td class='total'>1</td>
+					<td class='code'>FF03</td>
+					<td class='total'>1</td>
+				</tr>
+				<tr>
+					<td class='code'>FF04</td>
+					<td class='total'>0</td>
+					<td class='code'>FF04</td>
+					<td class='total'>2</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 class='code border-right'><b>Cake</b></td>
+		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("CAKE");'>+</td>
+	</tr>
+	<tr id='CAKE' style='display:none;'>
+		<td colspan=4>
+			<table width='100%'>
+				<tr>
+					<td class='code'>CAKE09</td>
+					<td class='total'>1</td>
+					<td class='code'>CAKE09</td>
+					<td class='total'>1</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 class='code border-right'><b>Drinks</b></td>
+		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("DR");'>+</td>
+	</tr>
+	<tr id='DR' style='display:none;'>
+		<td colspan=4>
+			<table width='100%'>
+				<tr>
+					<td class='code'>DR01</td>
+					<td class='total'>2</td>
+					<td class='code'>DR01</td>
+					<td class='total'>4</td>
+				</tr>
+				<tr>
+					<td class='code'>DR02</td>
+					<td class='total'>4</td>
+					<td class='code'>DR02</td>
+					<td class='total'>11</td>
+				</tr>
+				<tr>
+					<td class='code'>DR03</td>
+					<td class='total'>0</td>
+					<td class='code'>DR03</td>
+					<td class='total'>2</td>
+				</tr>
+				<tr>
+					<td class='code'>DR04</td>
+					<td class='total'>1</td>
+					<td class='code'>DR04</td>
+					<td class='total'>0</td>
+				</tr>
+				<tr>
+					<td class='code'>DR05</td>
+					<td class='total'>3</td>
+					<td class='code'>DR05</td>
+					<td class='total'>0</td>
+				</tr>
+				<tr>
+					<td class='code'>DR06</td>
+					<td class='total'>2</td>
+					<td class='code'>DR06</td>
+					<td class='total'>1</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 class='code border-right'><b>Coffee</b></td>
+		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("CF");'>+</td>
+	</tr>
+	<tr id='CF' style='display:none;'>
+		<td colspan=4>
+			<table width='100%'>
+				<tr>
+					<td class='code'>CF08</td>
+					<td class='total'>1</td>
+					<td class='code'>CF08</td>
+					<td class='total'>0</td>
+				</tr>
+				<tr>
+					<td class='code'>CF09</td>
+					<td class='total'>0</td>
+					<td class='code'>CF09</td>
+					<td class='total'>2</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 class='code border-right'><b>Mocktail</b></td>
+		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("MT");'>+</td>
+	</tr>
+	<tr id='MT' style='display:none;'>
+		<td colspan=4>
+			<table width='100%'>
+				<tr>
+					<td class='code'>MT03</td>
+					<td class='total'>1</td>
+					<td class='code'>MT03</td>
+					<td class='total'>0</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 class='code border-right'><b>Beer</b></td>
+		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("B");'>+</td>
+	</tr>
+	<tr id='B' style='display:none;'>
+		<td colspan=4>
+			<table width='100%'>
+				<tr>
+					<td class='code'>B02</td>
+					<td class='total'>1</td>
+					<td class='code'>B02</td>
+					<td class='total'>1</td>
+				</tr>
+				<tr>
+					<td class='code'>B03</td>
+					<td class='total'>0</td>
+					<td class='code'>B03</td>
+					<td class='total'>2</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 class='code border-right'><b>Cocktail</b></td>
+		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("CT");'>+</td>
+	</tr>
+	<tr id='CT' style='display:none;'>
+		<td colspan=4>
+			<table width='100%'>
+				<tr>
+					<td class='code'>CT02</td>
+					<td class='total'>1</td>
+					<td class='code'>CT02</td>
+					<td class='total'>0</td>
+				</tr>
+				<tr>
+					<td class='code'>CT03</td>
+					<td class='total'>1</td>
+					<td class='code'>CT03</td>
+					<td class='total'>0</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 class='code border-right'><b>AddOn</b></td>
+		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("ADD");'>+</td>
+	</tr>
+	<tr id='ADD' style='display:none;'>
+		<td colspan=4>
+			<table width='100%'>
+				<tr>
+					<td class='code'>ADD02</td>
+					<td class='total'>0</td>
+					<td class='code'>ADD02</td>
+					<td class='total'>7</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<script>
+function fnAccordion(x){
+	if(document.getElementById(x).style.zIndex == ""){
+		document.getElementById(x).style.display = "";
+		document.getElementById(x).style.zIndex = "1";
+	}else{
+		document.getElementById(x).style.display = "none";
+		document.getElementById(x).style.zIndex = "";
+	}
+}
+</script>
