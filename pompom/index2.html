@@ -1,391 +1,334 @@
 <style>
- .data{
-	text-align:center;
-	width:25%;
- }
- 
- .total{
-	text-align:right;
-	width:10%;
- }
- 
- .code{
-	text-align:left;
-	width:35%;
- }
- td{border:1px solid black;}
- table{border-collapse:collapse; width:100%;}
- .border-right{border-right:none; background:#bababa;}
- .border-left{border-left:none; background:#bababa;}
+table{	width:100%; margin:0 auto;}
+td{height:100px; text-align:center;}
+td:nth-child(1){width:10%;}
+td:nth-child(2){width:90%;}
+img{height:100px; width:200px;}
+button{width:200px; height:70px;}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<head>
+    <title>Pom Pom by the corner</title>
+</head>
+<body>
 <table>
 	<tr>
-		<td colspan=2 class='data'><b>[16th June 2023]<br>(Fri)</b></td>
-		<td colspan=2 class='data'><b>[18th June 2023]<br>(Sun)</b></td>
-	</tr>
-	<tr>
-		<td colspan=2 class='code border-right'><b>Rice & Noodles</b></td>
-		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("RN");'>+</td>
-	</tr>
-	<tr id='RN' style='display:none;'>
-		<td colspan=4>
-			<table width='100%'>
-				<tr>
-					<td class='code'>RN01</td>
-					<td class='total'>0</td>
-					<td class='code'>RN01</td>
-					<td class='total'>2</td>
-				</tr>
-				<tr>
-					<td class='code'>RN02</td>
-					<td class='total'>0</td>
-					<td class='code'>RN02</td>
-					<td class='total'>1</td>
-				</tr>
-				<tr>
-					<td class='code'>RN03</td>
-					<td class='total'>0</td>
-					<td class='code'>RN03</td>
-					<td class='total'>3</td>
-				</tr>
-				<tr>
-					<td class='code'>RN04</td>
-					<td class='total'>0</td>
-					<td class='code'>RN04</td>
-					<td class='total'>1</td>
-				</tr>
-				<tr>
-					<td class='code'>RN05</td>
-					<td class='total'>3</td>
-					<td class='code'>RN05</td>
-					<td class='total'>0</td>
-				</tr>
-				<tr>
-					<td class='code'>RN06</td>
-					<td class='total'>1</td>
-					<td class='code'>RN06</td>
-					<td class='total'>0</td>
-				</tr>
-				<tr>
-					<td class='code'>RN07</td>
-					<td class='total'>2</td>
-					<td class='code'>RN07</td>
-					<td class='total'>0</td>
-				</tr>
-				<tr>
-					<td class='code'>RN08</td>
-					<td class='total'>3</td>
-					<td class='code'>RN08</td>
-					<td class='total'>1</td>
-				</tr>
-				<tr>
-					<td class='code'>RN10</td>
-					<td class='total'>2</td>
-					<td class='code'>RN10</td>
-					<td class='total'>1</td>
-				</tr>
-				<tr>
-					<td class='code'>RN11</td>
-					<td class='total'>0</td>
-					<td class='code'>RN11</td>
-					<td class='total'>1</td>
-				</tr>
-				<tr>
-					<td class='code'>RN13</td>
-					<td class='total'>0</td>
-					<td class='code'>RN13</td>
-					<td class='total'>1</td>
-				</tr>
-			</table>
+		<td>
+			<input type="checkbox"  name="chck" value="bawang holland x 2 kg"/>
+		</td>
+		<td>
+			<img src="img/bawang holland.jpg" />
 		</td>
 	</tr>
 	<tr>
-		<td colspan=2 class='code border-right'><b>Western Food</b></td>
-		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("WS");'>+</td>
-	</tr>
-	<tr id='WS' style='display:none;'>
-		<td colspan=4>
-			<table width='100%'>
-				<tr>
-					<td class='code'>WS01</td>
-					<td class='total'>0</td>
-					<td class='code'>WS01</td>
-					<td class='total'>1</td>
-				</tr>
-				<tr>
-					<td class='code'>WS02</td>
-					<td class='total'>1</td>
-					<td class='code'>WS02</td>
-					<td class='total'>0</td>
-				</tr>
-				<tr>
-					<td class='code'>WS05</td>
-					<td class='total'>0</td>
-					<td class='code'>WS05</td>
-					<td class='total'>1</td>
-				</tr>
-				<tr>
-					<td class='code'>WS06</td>
-					<td class='total'>0</td>
-					<td class='code'>WS06</td>
-					<td class='total'>1</td>
-				</tr>				
-			</table>
+		<td>
+			<input type="checkbox"  name="chck" value="bawang merah x 2 kg"/>
+		</td>
+		<td>
+			<img src="img/bawang merah.jpg" />
 		</td>
 	</tr>
 	<tr>
-		<td colspan=2 class='code border-right'><b>Dinner Set</b></td>
-		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("DN");'>+</td>
-	</tr>
-	<tr id='DN' style='display:none;'>
-		<td colspan=4>
-			<table width='100%'>
-				<tr>
-					<td class='code'>DN01</td>
-					<td class='total'>0</td>
-					<td class='code'>DN01</td>
-					<td class='total'>3</td>
-				</tr>
-				<tr>
-					<td class='code'>DN02</td>
-					<td class='total'>0</td>
-					<td class='code'>DN02</td>
-					<td class='total'>1</td>
-				</tr>
-				<tr>
-					<td class='code'>DN04</td>
-					<td class='total'>4</td>
-					<td class='code'>DN04</td>
-					<td class='total'>1</td>
-				</tr>
-				<tr>
-					<td class='code'>DN05</td>
-					<td class='total'>0</td>
-					<td class='code'>DN05</td>
-					<td class='total'>1</td>
-				</tr>
-				<tr>
-					<td class='code'>DN10</td>
-					<td class='total'>1</td>
-					<td class='code'>DN10</td>
-					<td class='total'>0</td>
-				</tr>				
-			</table>
+		<td>
+			<input type="checkbox"  name="chck" value="carrot x 1 kg"/>
+		</td>
+		<td>
+			<img src="img/carrot.jpg" />
 		</td>
 	</tr>
 	<tr>
-		<td colspan=2 class='code border-right'><b>Finger Food</b></td>
-		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("FF");'>+</td>
-	</tr>
-	<tr id='FF' style='display:none;'>
-		<td colspan=4>
-			<table width='100%'>
-				<tr>
-					<td class='code'>FF02</td>
-					<td class='total'>2</td>
-					<td class='code'>FF02</td>
-					<td class='total'>1</td>
-				</tr>
-				<tr>
-					<td class='code'>FF03</td>
-					<td class='total'>1</td>
-					<td class='code'>FF03</td>
-					<td class='total'>1</td>
-				</tr>
-				<tr>
-					<td class='code'>FF04</td>
-					<td class='total'>0</td>
-					<td class='code'>FF04</td>
-					<td class='total'>2</td>
-				</tr>
-			</table>
+		<td>
+			<input type="checkbox"  name="chck" value="cherry tomato x 1 kg"/>
+		</td>
+		<td>
+			<img src="img/cherry tomato.jpg" />
 		</td>
 	</tr>
 	<tr>
-		<td colspan=2 class='code border-right'><b>Cake</b></td>
-		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("CAKE");'>+</td>
-	</tr>
-	<tr id='CAKE' style='display:none;'>
-		<td colspan=4>
-			<table width='100%'>
-				<tr>
-					<td class='code'>CAKE09</td>
-					<td class='total'>1</td>
-					<td class='code'>CAKE09</td>
-					<td class='total'>1</td>
-				</tr>
-			</table>
+		<td>
+			<input type="checkbox"  name="chck" value="cili merah x 300 gram"/>
+		</td>
+		<td>
+			<img src="img/cili merah.jpg" />
 		</td>
 	</tr>
 	<tr>
-		<td colspan=2 class='code border-right'><b>Drinks</b></td>
-		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("DR");'>+</td>
-	</tr>
-	<tr id='DR' style='display:none;'>
-		<td colspan=4>
-			<table width='100%'>
-				<tr>
-					<td class='code'>DR01</td>
-					<td class='total'>2</td>
-					<td class='code'>DR01</td>
-					<td class='total'>4</td>
-				</tr>
-				<tr>
-					<td class='code'>DR02</td>
-					<td class='total'>4</td>
-					<td class='code'>DR02</td>
-					<td class='total'>11</td>
-				</tr>
-				<tr>
-					<td class='code'>DR03</td>
-					<td class='total'>0</td>
-					<td class='code'>DR03</td>
-					<td class='total'>2</td>
-				</tr>
-				<tr>
-					<td class='code'>DR04</td>
-					<td class='total'>1</td>
-					<td class='code'>DR04</td>
-					<td class='total'>0</td>
-				</tr>
-				<tr>
-					<td class='code'>DR05</td>
-					<td class='total'>3</td>
-					<td class='code'>DR05</td>
-					<td class='total'>0</td>
-				</tr>
-				<tr>
-					<td class='code'>DR06</td>
-					<td class='total'>2</td>
-					<td class='code'>DR06</td>
-					<td class='total'>1</td>
-				</tr>
-			</table>
+		<td>
+			<input type="checkbox"  name="chck" value="cili padi hijau x 200 gram"/>
+		</td>
+		<td>
+			<img src="img/cili padi hijau.jpg" />
 		</td>
 	</tr>
 	<tr>
-		<td colspan=2 class='code border-right'><b>Coffee</b></td>
-		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("CF");'>+</td>
-	</tr>
-	<tr id='CF' style='display:none;'>
-		<td colspan=4>
-			<table width='100%'>
-				<tr>
-					<td class='code'>CF08</td>
-					<td class='total'>1</td>
-					<td class='code'>CF08</td>
-					<td class='total'>0</td>
-				</tr>
-				<tr>
-					<td class='code'>CF09</td>
-					<td class='total'>0</td>
-					<td class='code'>CF09</td>
-					<td class='total'>2</td>
-				</tr>
-			</table>
+		<td>
+			<input type="checkbox"  name="chck" value="cili padi merah x 300 gram"/>
+		</td>
+		<td>
+			<img src="img/cili padi merah.jpg" />
 		</td>
 	</tr>
 	<tr>
-		<td colspan=2 class='code border-right'><b>Mocktail</b></td>
-		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("MT");'>+</td>
-	</tr>
-	<tr id='MT' style='display:none;'>
-		<td colspan=4>
-			<table width='100%'>
-				<tr>
-					<td class='code'>MT03</td>
-					<td class='total'>1</td>
-					<td class='code'>MT03</td>
-					<td class='total'>0</td>
-				</tr>
-			</table>
+		<td>
+			<input type="checkbox"  name="chck" value="coconut x 5 biji"/>
+		</td>
+		<td>
+			<img src="img/coconut.jpg" />
 		</td>
 	</tr>
 	<tr>
-		<td colspan=2 class='code border-right'><b>Beer</b></td>
-		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("B");'>+</td>
-	</tr>
-	<tr id='B' style='display:none;'>
-		<td colspan=4>
-			<table width='100%'>
-				<tr>
-					<td class='code'>B02</td>
-					<td class='total'>1</td>
-					<td class='code'>B02</td>
-					<td class='total'>1</td>
-				</tr>
-				<tr>
-					<td class='code'>B03</td>
-					<td class='total'>0</td>
-					<td class='code'>B03</td>
-					<td class='total'>2</td>
-				</tr>
-			</table>
+		<td>
+			<input type="checkbox"  name="chck" value="daun bawang x 500 gram"/>
+		</td>
+		<td>
+			<img src="img/daun bawang.jpg" />
 		</td>
 	</tr>
 	<tr>
-		<td colspan=2 class='code border-right'><b>Cocktail</b></td>
-		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("CT");'>+</td>
-	</tr>
-	<tr id='CT' style='display:none;'>
-		<td colspan=4>
-			<table width='100%'>
-				<tr>
-					<td class='code'>CT02</td>
-					<td class='total'>1</td>
-					<td class='code'>CT02</td>
-					<td class='total'>0</td>
-				</tr>
-				<tr>
-					<td class='code'>CT03</td>
-					<td class='total'>1</td>
-					<td class='code'>CT03</td>
-					<td class='total'>0</td>
-				</tr>
-			</table>
+		<td>
+			<input type="checkbox"  name="chck" value="daun ketumbar x 300 gram"/>
+		</td>
+		<td>
+			<img src="img/daun ketumba.jpg" />
 		</td>
 	</tr>
 	<tr>
-		<td colspan=2 class='code border-right'><b>AddOn</b></td>
-		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("ADD");'>+</td>
-	</tr>
-	<tr id='ADD' style='display:none;'>
-		<td colspan=4>
-			<table width='100%'>
-				<tr>
-					<td class='code'>ADD02</td>
-					<td class='total'>0</td>
-					<td class='code'>ADD02</td>
-					<td class='total'>7</td>
-				</tr>
-			</table>
+		<td>
+			<input type="checkbox"  name="chck" value="daun kucai x 100 gram"/>
+		</td>
+		<td>
+			<img src="img/daun kucai.jpg" />
 		</td>
 	</tr>
 	<tr>
-		<td colspan=2 class='code border-right'><b>Total Table</b></td>
-		<td colspan=2 class='total border-left' style='cursor:pointer;' onclick='fnAccordion("tt");'>+</td>
+		<td>
+			<input type="checkbox"  name="chck" value="daun limau x 200 gram"/>
+		</td>
+		<td>
+			<img src="img/daun limau.jpg" />
+		</td>
 	</tr>
-	<tr id='tt' style='display:none;'>
-		<td colspan=4>
-			<table width='100%'>
-				<tr>
-					<td colspan=2 class='code'>4</td>					
-					<td colspan=2 class='code'>9</td>					
-				</tr>
-			</table>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="daun pisang x 1 kg"/>
+		</td>
+		<td>
+			<img src="img/daun pisang.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="daun selasih x 300 gram"/>
+		</td>
+		<td>
+			<img src="img/daun selasih.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="daun sup x 300 gram"/>
+		</td>
+		<td>
+			<img src="img/daun sup.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="fish cake x 2 pack"/>
+		</td>
+		<td>
+			<img src="img/fish cake.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="halia muda x 500 gram"/>
+		</td>
+		<td>
+			<img src="img/halia muda.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="hk kailan x 10 pack"/>
+		</td>
+		<td>
+			<img src="img/hk kailan.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="kacang panjang x 1 kg"/>
+		</td>
+		<td>
+			<img src="img/kacang panjang.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="kangkung x 2 kg"/>
+		</td>
+		<td>
+			<img src="img/kangkung.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="kentang x 2kg"/>
+		</td>
+		<td>
+			<img src="img/kentang.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="kunyit x 200 gram"/>
+		</td>
+		<td>
+			<img src="img/kunyit.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="lemon x 10 biji"/>
+		</td>
+		<td>
+			<img src="img/lemon.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="lengkuas x 1 kg"/>
+		</td>
+		<td>
+			<img src="img/lengkuas.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="limau nipis x 3 kg"/>
+		</td>
+		<td>
+			<img src="img/limau nipis.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="mango muda x 2 kg"/>
+		</td>
+		<td>
+			<img src="img/mango muda.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="nanas x 2 biji"/>
+		</td>
+		<td>
+			<img src="img/nanas.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="peeled garlic x 2 pack"/>
+		</td>
+		<td>
+			<img src="img/peel garlic.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="romaine lettuce x 2 kg"/>
+		</td>
+		<td>
+			<img src="img/romaine lettuce.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="serai x 1 kg"/>
+		</td>
+		<td>
+			<img src="img/serai.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="shimeiji mushroom white x 10 pack"/>
+		</td>
+		<td>
+			<img src="img/shimeiji mushroom white.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="tau geh x 500 gram"/>
+		</td>
+		<td>
+			<img src="img/tau geh.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="telur x 5 papan"/>
+		</td>
+		<td>
+			<img src="img/telur.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="terung panjang x 1 kg"/>
+		</td>
+		<td>
+			<img src="img/terung panjang.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value="terung siam bulat x 1 kg"/>
+		</td>
+		<td>
+			<img src="img/terung siam bulat.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value='timun jepun x 2 kg'/>
+		</td>
+		<td>
+			<img src="img/timun jepun.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox"  name="chck" value='tomato x 1 kg'/>
+		</td>
+		<td>
+			<img src="img/tomato.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2>
+			<button onclick="fnClick('chck')">Submit</button>
 		</td>
 	</tr>
 </table>
-
+</body>
 <script>
-function fnAccordion(x){
-	if(document.getElementById(x).style.zIndex == ""){
-		document.getElementById(x).style.display = "";
-		document.getElementById(x).style.zIndex = "1";
-	}else{
-		document.getElementById(x).style.display = "none";
-		document.getElementById(x).style.zIndex = "";
+function fnClick(chkboxName){
+	var checkboxes = document.getElementsByName(chkboxName);
+	var checkboxesChecked = [];
+	var list="";
+	// loop over them all
+	for (var i=0; i<checkboxes.length; i++) {
+	// And stick the checked ones onto an array...
+		if (checkboxes[i].checked) {
+			list += checkboxes[i].value + "%0a"
+		}
 	}
-}
+location.href="https://wa.me/601128724776?text="+list;	
+}	
+	
+	
 </script>
